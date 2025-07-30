@@ -1,29 +1,35 @@
-// Language Translations
+ // Language Translations
 const translations = {
     'ar': {
         gameTitle: "رحلة المبرمج",
         slogan: "انطلق في مغامرة تعلم C++، من الأساسيات حتى الاحتراف!",
-        startButton: "ابدأ اللعبة",
+        startGameModes: "أنماط اللعب", // New
+        startButton: "ابدأ اللعبة", // Now specific to C++ Journey
         settingsButton: "الإعدادات",
         learnWithUsButton: "تعلم معنا",
         developerInfoButton: "المطور",
+        leaderboardButton: "لوحة المتصدرين",
         settingsTitle: "الإعدادات",
         toggleSound: "تشغيل/إيقاف الصوت:",
         musicVolume: "مستوى صوت الموسيقى:",
         sfxVolume: "مستوى صوت المؤثرات:",
         language: "اللغة:",
-        toggleTimer: "تشغيل/إيقاف المؤقت:", // New
-        timerDuration: "مدة المؤقت (ثانية):", // New
-        seconds: "ثانية", // New
+        toggleTimer: "تشغيل/إيقاف المؤقت:",
+        timerDuration: "مدة المؤقت (ثانية):",
+        seconds: "ثانية",
+        themeSelect: "السمة:",
+        themeDefault: "افتراضي (بنفسجي)",
+        themeCyberBlue: "أزرق سيبراني",
+        themeMatrixGreen: "أخضر ماتريكس",
         moreSettingsSoon: "المزيد من الإعدادات قريباً...",
         backToMainMenu: "العودة للقائمة الرئيسية",
         developerInfoTitle: "معلومات المطور",
         devInfoText1: "تم تطوير هذه اللعبة بواسطة ZentOfficial.",
         devInfoText2: "تم تطوير اللعبة لهدف التعلم والتدريب والاتقان للغة سي بلس بلس.",
         devInfoText3: "للاستفسار بأي شيء تواصل مع الحساب التالي:",
-        instagramLinkText: "ZentOfficial", // Text for Instagram link
-        contactUsLabel: "للاستفسار التواصل على:", // New label for contact info
-        runExampleText: "تشغيل المثال", // Text for run example button
+        instagramLinkText: "ZentOfficial",
+        contactUsLabel: "للاستفسار التواصل على:",
+        runExampleText: "تشغيل المثال",
         learnWithUsTitle: "تعلم معنا",
         cppBasicsTitle: "أساسيات لغة C++",
         cppBasicsText: "C++ هي لغة برمجة قوية ومتعددة الاستخدامات، تستخدم في تطوير أنظمة التشغيل، الألعاب، التطبيقات عالية الأداء، وغيرها. لتعلمها بشكل صحيح، ابدأ بالأساسيات:",
@@ -81,6 +87,9 @@ const translations = {
         books: "الكتب:",
         smallProjects: "المشاريع الصغيرة:",
         noteSimulation: "ملاحظة: هذه اللعبة توفر محاكاة لبيئة البرمجة. في الواقع، ستحتاج إلى تثبيت مترجم C++ (مثل GCC) وبيئة تطوير متكاملة (IDE) لتشغيل أكوادك.",
+        gameModesMenuTitle: "اختر نمط اللعب", // New
+        cppJourneyButton: "رحلة C++", // New
+        spotTheDifferenceButton: "أوجد الاختلاف", // New
         selectStageTitle: "اختر المرحلة",
         returnToMainMenu: "العودة للقائمة الرئيسية",
         runCodeButton: "تشغيل الكود",
@@ -95,40 +104,54 @@ const translations = {
         loading: "جاري التحميل...",
         codeBuildError: "خطأ في بناء الكود:",
         outputError: "خطأ في المخرجات أو الكود غير مكتمل. حاول مرة أخرى. \nالمخرجات المتوقعة:",
-        timerExpired: "انتهى الوقت! لم تكمل المرحلة في الوقت المحدد.", // New
+        timerExpired: "انتهى الوقت! لم تكمل المرحلة في الوقت المحدد.",
         example: "مثال:",
         imageOfConsoleOutput: "مخرج الكونسول",
         imageOfTextString: "سلسلة نصية",
         imageOfDynamicArray: "مصفوفة ديناميكية",
         imageOfMathSymbols: "رموز رياضية",
         imageOfFileIcon: "أيقونة ملف",
-        goText: "انطلق!", // New translation for countdown
-        settingsInGame: "الإعدادات" // New translation for settings button in game
+        goText: "انطلق!",
+        settingsInGame: "الإعدادات",
+        codeStreak: "سلسلة نجاح: {streak}!",
+        leaderboardMenuTitle: "لوحة المتصدرين",
+        leaderboardEmpty: "لا توجد نتائج حتى الآن. كن أول من يكمل مرحلة!",
+        leaderboardEntry: "{name}: {score} مراحل مكتملة",
+        yourScore: "نقاطك: {score} مراحل مكتملة",
+        differencesFound: "الاختلافات المكتشفة: {found}/{total}", // New
+        spotTheDifferenceTask: "ابحث عن {total} اختلافات بين الكودين. انقر على كل اختلاف في الكود الأيمن لإصلاحه.", // New
+        allDifferencesFound: "أحسنت! لقد وجدت جميع الاختلافات!", // New
     },
     'en': {
         gameTitle: "The Programmer's Journey",
         slogan: "Embark on a C++ learning adventure, from basics to mastery!",
-        startButton: "Start Game",
+        startGameModes: "Game Modes", // New
+        startButton: "Start Game", // Now specific to C++ Journey
         settingsButton: "Settings",
         learnWithUsButton: "Learn With Us",
         developerInfoButton: "Developer",
+        leaderboardButton: "Leaderboard",
         settingsTitle: "Settings",
         toggleSound: "Toggle Sound:",
         musicVolume: "Music Volume:",
         sfxVolume: "SFX Volume:",
         language: "Language:",
-        toggleTimer: "Enable Timer:", // New
-        timerDuration: "Timer Duration (seconds):", // New
-        seconds: "s", // New
+        toggleTimer: "Enable Timer:",
+        timerDuration: "Timer Duration (seconds):",
+        seconds: "s",
+        themeSelect: "Theme:",
+        themeDefault: "Default (Purple)",
+        themeCyberBlue: "Cyber Blue",
+        themeMatrixGreen: "Matrix Green",
         moreSettingsSoon: "More settings coming soon...",
         backToMainMenu: "Back to Main Menu",
         developerInfoTitle: "Developer Info",
         devInfoText1: "This game was developed by ZentOfficial.",
         devInfoText2: "The game was developed for the purpose of learning, training, and mastering the C++ language.",
         devInfoText3: "For any inquiries, contact the following account:",
-        instagramLinkText: "ZentOfficial", // Text for Instagram link
-        contactUsLabel: "For inquiries, contact:", // New label for contact info
-        runExampleText: "Run Example", // Text for run example button
+        instagramLinkText: "ZentOfficial",
+        contactUsLabel: "For inquiries, contact:",
+        runExampleText: "Run Example",
         learnWithUsTitle: "Learn With Us",
         cppBasicsTitle: "C++ Basics",
         cppBasicsText: "C++ is a powerful and versatile programming language, used in operating systems, games, high-performance applications, and more. To learn it correctly, start with the basics:",
@@ -186,6 +209,9 @@ const translations = {
         books: "Books:",
         smallProjects: "Small Projects:",
         noteSimulation: "Note: This game provides a simulation of the programming environment. In reality, you will need to install a C++ compiler (like GCC) and an Integrated Development Environment (IDE) to run your code.",
+        gameModesMenuTitle: "Choose Game Mode", // New
+        cppJourneyButton: "C++ Journey", // New
+        spotTheDifferenceButton: "Spot the Difference", // New
         selectStageTitle: "Select Stage",
         returnToMainMenu: "Back to Main Menu",
         runCodeButton: "Run Code",
@@ -200,21 +226,30 @@ const translations = {
         loading: "Loading...",
         codeBuildError: "Code build error:",
         outputError: "Output error or incomplete code. Please try again. \nExpected output:",
-        timerExpired: "Time's up! You did not complete the stage in time.", // New
+        timerExpired: "Time's up! You did not complete the stage in time.",
         example: "Example:",
         imageOfConsoleOutput: "Console Output Image",
         imageOfTextString: "Text String Image",
         imageOfDynamicArray: "Dynamic Array Image",
         imageOfMathSymbols: "Math Symbols Image",
         imageOfFileIcon: "File Icon Image",
-        goText: "GO!", // New translation for countdown
-        settingsInGame: "Settings" // New translation for settings button in game
+        goText: "GO!",
+        settingsInGame: "Settings",
+        codeStreak: "Code Streak: {streak}!",
+        leaderboardMenuTitle: "Leaderboard",
+        leaderboardEmpty: "No scores yet. Be the first to complete a stage!",
+        leaderboardEntry: "{name}: {score} stages completed",
+        yourScore: "Your Score: {score} stages completed",
+        differencesFound: "Differences Found: {found}/{total}", // New
+        spotTheDifferenceTask: "Find {total} differences between the two code snippets. Click on each difference in the right code block to fix it.", // New
+        allDifferencesFound: "Excellent! You found all the differences!", // New
     }
 };
 
 // Define the stages of the game with localized content
 const stages = [
     {
+        gameType: 'cpp-journey', // New field: cpp-journey or spot-the-difference
         title: { ar: "المرحلة 1: أول برنامج لك - 'Hello, C++!'", en: "Stage 1: Your First Program - 'Hello, C++!'" },
         concept: { ar: "تعلم كيفية كتابة وتشغيل برنامجك الأول في C++ لطباعة رسالة على الشاشة.", en: "Learn how to write and run your first C++ program to print a message to the screen." },
         task: { ar: "اكتب برنامج C++ يطبع النص التالي: 'مرحباً، C++!' على سطر جديد.", en: "Write a C++ program that prints the following text: 'Hello, C++!' on a new line." },
@@ -224,7 +259,7 @@ const stages = [
             const hasInclude = /#include\s*<iostream>/.test(code);
             const hasMain = /int\s*main\s*\(\s*\)/.test(code);
             const hasCout = /std::cout\s*<<\s*["']مرحباً، C\+\+!["']\s*<<\s*std::endl\s*;/.test(code) ||
-                             /cout\s*<<\s*["']مرحباً، C\+\+!["']\s*<<\s*endl\s*;/.test(code);
+                                 /cout\s*<<\s*["']مرحباً، C\+\+!["']\s*<<\s*endl\s*;/.test(code);
 
             if (!hasInclude) return translations[currentLanguage].cppBasicsText; // More specific error in translation
             if (!hasMain) return translations[currentLanguage].cppBasicsText;
@@ -234,6 +269,7 @@ const stages = [
         hint: { ar: "تذكر أن تستخدم `std::cout` لطباعة النص، و`std::endl` لإنشاء سطر جديد، ولا تنسَ `return 0;` في نهاية الدالة الرئيسية.", en: "Remember to use `std::cout` to print text, `std::endl` to create a new line, and don't forget `return 0;` at the end of the main function." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 2: المتغيرات وأنواع البيانات", en: "Stage 2: Variables and Data Types" },
         concept: { ar: "تعلم كيفية الإعلان عن المتغيرات وتخزين أنواع مختلفة من البيانات.", en: "Learn how to declare variables and store different types of data." },
         task: { ar: "أعلن عن متغير من نوع عدد صحيح (int) باسم `age` وأعطه القيمة 25. ثم اطبع قيمة هذا المتغير على الشاشة.", en: "Declare an integer (int) variable named `age` and assign it the value 25. Then print the value of this variable to the screen." },
@@ -251,6 +287,7 @@ const stages = [
         hint: { ar: "ابدأ بإعلان `int age = 25;` ثم استخدم `std::cout << age << std::endl;`.", en: "Start by declaring `int age = 25;` then use `std::cout << age << std::endl;`." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 3: العمليات الحسابية", en: "Stage 3: Arithmetic Operations" },
         concept: { ar: "استخدام العمليات الحسابية الأساسية مثل الجمع والطرح والضرب والقسمة.", en: "Use basic arithmetic operations like addition, subtraction, multiplication, and division." },
         task: { ar: "أعلن عن متغيرين صحيحين `num1` بقيمة 10 و`num2` بقيمة 5. احسب مجموعهما واطبعه على الشاشة.", en: "Declare two integer variables `num1` with value 10 and `num2` with value 5. Calculate their sum and print it to the screen." },
@@ -269,6 +306,7 @@ const stages = [
         hint: { ar: "يمكنك جمع المتغيرات مباشرة داخل جملة الطباعة: `std::cout << num1 + num2 << std::endl;`.", en: "You can sum variables directly within the print statement: `std::cout << num1 + num2 << std::endl;`." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 4: جملة If الشرطية", en: "Stage 4: If Statement" },
         concept: { ar: "تعلم كيفية استخدام جملة `if` لاتخاذ القرارات في برنامجك.", en: "Learn how to use the `if` statement to make decisions in your program." },
         task: { ar: "أعلن عن متغير صحيح `score` بقيمة 85. استخدم جملة `if` لطباعة 'ناجح' إذا كانت `score` أكبر من أو تساوي 50.", en: "Declare an integer variable `score` with value 85. Use an `if` statement to print 'Success' if `score` is greater than or equal to 50." },
@@ -285,6 +323,7 @@ const stages = [
         hint: { ar: "تذكر أن بناء جملة `if` هو `if (condition) { // code }`.", en: "Remember that the `if` statement syntax is `if (condition) { // code }`." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 5: جملة If-Else الشرطية", en: "Stage 5: If-Else Statement" },
         concept: { ar: "استخدام `if-else` لتنفيذ كود مختلف بناءً على شرط.", en: "Use `if-else` to execute different code based on a condition." },
         task: { ar: "أعلن عن متغير صحيح `temp` بقيمة 20. إذا كانت `temp` أكبر من 25، اطبع 'حار'. وإلا، اطبع 'معتدل'.", en: "Declare an integer variable `temp` with value 20. If `temp` is greater than 25, print 'Hot'. Otherwise, print 'Moderate'." },
@@ -301,6 +340,7 @@ const stages = [
         hint: { ar: "بناء جملة `if-else` هو `if (condition) { // code } else { // code }`.", en: "The `if-else` statement syntax is `if (condition) { // code } else { // code }`." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 6: حلقة For التكرارية", en: "Stage 6: For Loop" },
         concept: { ar: "تعلم كيفية استخدام حلقة `for` لتكرار كتلة من التعليمات البرمجية لعدد محدد من المرات.", en: "Learn how to use a `for` loop to repeat a block of code a specific number of times." },
         task: { ar: "استخدم حلقة `for` لطباعة الأرقام من 1 إلى 3، كل رقم على سطر جديد.", en: "Use a `for` loop to print numbers from 1 to 3, each on a new line." },
@@ -314,6 +354,7 @@ const stages = [
         hint: { ar: "بناء جملة `for` هو `for (initialization; condition; update) { // code }`.", en: "The `for` loop syntax is `for (initialization; condition; update) { // code }`." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 7: الدوال (Functions)", en: "Stage 7: Functions" },
         concept: { ar: "فهم كيفية تعريف واستدعاء الدوال لتنظيم الشيفرة وإعادة استخدامها.", en: "Understand how to define and call functions to organize and reuse code." },
         task: { ar: "أنشئ دالة باسم `greet` لا تأخذ أي معاملات وتطبع 'أهلاً بك في C++!'. ثم استدعِ هذه الدالة في الدالة الرئيسية.", en: "Create a function named `greet` that takes no arguments and prints 'Welcome to C++!'. Then call this function in the main function." },
@@ -329,6 +370,7 @@ const stages = [
         hint: { ar: "الدالة التي لا ترجع قيمة تُعرف بـ `void`. استدعِ الدالة بكتابة اسمها متبوعًا بقوسين وفصلة منقوطة.", en: "A function that returns no value is defined with `void`. Call the function by writing its name followed by parentheses and a semicolon." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 8: المصفوفات (Arrays)", en: "Stage 8: Arrays" },
         concept: { ar: "تعلم كيفية الإعلان عن المصفوفات وتخزين مجموعات من البيانات من نفس النوع.", en: "Learn how to declare arrays and store collections of data of the same type." },
         task: { ar: "أعلن عن مصفوفة من الأعداد الصحيحة باسم `numbers` تحتوي على القيم 10، 20، 30. ثم اطبع العنصر الأول من المصفوفة.", en: "Declare an integer array named `numbers` containing the values 10, 20, 30. Then print the first element of the array." },
@@ -346,6 +388,7 @@ const stages = [
         hint: { ar: "تبدأ فهارس المصفوفات من 0. للإعلان عن مصفوفة: `int arr[] = {val1, val2, ...};`.", en: "Array indices start from 0. To declare an array: `int arr[] = {val1, val2, ...};`." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 9: المؤشرات (Pointers)", en: "Stage 9: Pointers" },
         concept: { ar: "فهم المؤشرات وكيفية استخدامها للوصول إلى عناوين الذاكرة.", en: "Understand pointers and how to use them to access memory addresses." },
         task: { ar: "أعلن عن متغير صحيح `value` بقيمة 42. أعلن عن مؤشر `ptr` يشير إلى `value`. اطبع قيمة `value` باستخدام المؤشر.", en: "Declare an integer variable `value` with value 42. Declare a pointer `ptr` that points to `value`. Print the value of `value` using the pointer." },
@@ -364,6 +407,7 @@ const stages = [
         hint: { ar: "للحصول على عنوان متغير استخدم `&`. للوصول إلى القيمة التي يشير إليها المؤشر استخدم `*`.", en: "To get the address of a variable use `&`. To access the value pointed to by a pointer use `*`." }
     },
     {
+        gameType: 'cpp-journey',
         title: { ar: "المرحلة 10: الفئات والكائنات (Classes & Objects)", en: "Stage 10: Classes & Objects" },
         concept: { ar: "مقدمة للبرمجة كائنية التوجه (OOP) من خلال الفئات والكائنات.", en: "Introduction to Object-Oriented Programming (OOP) through classes and objects." },
         task: { ar: "أنشئ فئة (class) بسيطة باسم `Car` تحتوي على خاصية عامة (public) اسمها `brand` من نوع `std::string`. أنشئ كائناً (object) من هذه الفئة، عيّن لخاصية `brand` القيمة 'Toyota'، ثم اطبع هذه القيمة.", en: "Create a simple class named `Car` with a public property named `brand` of type `std::string`. Create an object of this class, assign the value 'Toyota' to the `brand` property, then print this value." },
@@ -371,11 +415,11 @@ const stages = [
         expectedOutput: "Toyota\n",
         codeValidation: (code) => {
             const hasClassDefinition = /class\s+Car\s*\{\s*public:\s*std::string\s+brand\s*;\s*\};/.test(code) ||
-                                       /class\s+Car\s*\{\s*public:\s*string\s+brand\s*;\s*\};/.test(code);
+                                         /class\s+Car\s*\{\s*public:\s*string\s+brand\s*;\s*\};/.test(code);
             const hasObjectCreation = /Car\s+myCar\s*;\s*/.test(code);
             const hasBrandAssignment = /myCar\.brand\s*=\s*["']Toyota["']\s*;/i.test(code);
             const hasPrintBrand = /std::cout\s*<<\s*myCar\.brand\s*<<\s*std::endl\s*;/.test(code) ||
-                                   /cout\s*<<\s*myCar\.brand\s*<<\s*endl\s*;/.test(code);
+                                         /cout\s*<<\s*myCar\.brand\s*<<\s*endl\s*;/.test(code);
 
             if (!hasClassDefinition) return translations[currentLanguage].oop;
             if (!hasObjectCreation) return translations[currentLanguage].oop;
@@ -384,6 +428,55 @@ const stages = [
             return true;
         },
         hint: { ar: "الفئات تُعرف بـ `class ClassName { public: /* members */ };`. الكائنات تُنشأ بـ `ClassName objectName;`. للوصول إلى الأعضاء استخدم `.`.", en: "Classes are defined with `class ClassName { public: /* members */ };`. Objects are created with `ClassName objectName;`. To access members use `.`." }
+    },
+    {
+        gameType: 'cpp-journey', // New stage type
+        title: { ar: "المرحلة 11: أوجد الخطأ وأصلحه!", en: "Stage 11: Find and Fix the Bug!" },
+        concept: { ar: "تحديد الأخطاء الشائعة في الكود البرمجي وإصلاحها.", en: "Identify and fix common programming errors." },
+        task: { ar: "الكود التالي يحتوي على خطأ. أصلحه لكي يطبع 'الخطأ تم إصلاحه!' على سطر جديد.", en: "The following code contains a bug. Fix it to print 'Bug fixed!' on a new line." },
+        initialCode: `#include <iostream>\n\nint main() {\n    std::cout << "الخطأ تم إصلاحه!" << std::endl;\n    return 0\n}`, // Bug: missing semicolon
+        correctCode: `#include <iostream>\n\nint main() {\n    std::cout << "الخطأ تم إصلاحه!" << std::endl;\n    return 0;\n}`, // Corrected version
+        expectedOutput: "الخطأ تم إصلاحه!\n",
+        codeValidation: (code) => {
+            // For bug fixing, we primarily check if the final code matches the correct version
+            // and if it produces the expected output.
+            const hasSemicolon = /return\s*0\s*;/i.test(code);
+            if (!hasSemicolon) return translations[currentLanguage].codeBuildError + " " + translations[currentLanguage].hint;
+            
+            const hasInclude = /#include\s*<iostream>/.test(code);
+            const hasMain = /int\s*main\s*\(\s*\)/.test(code);
+            const hasCout = /std::cout\s*<<\s*["']الخطأ تم إصلاحه!["']\s*<<\s*std::endl\s*;/.test(code) ||
+                                 /cout\s*<<\s*["']الخطأ تم إصلاحه!["']\s*<<\s*endl\s*;/.test(code);
+
+            if (!hasInclude || !hasMain || !hasCout) return translations[currentLanguage].codeBuildError + " " + translations[currentLanguage].cppBasicsText;
+            return true;
+        },
+        hint: { ar: "ابحث عن الفاصلة المنقوطة المفقودة في نهاية جملة `return 0`!", en: "Look for a missing semicolon at the end of the `return 0` statement!" }
+    },
+    {
+        gameType: 'spot-the-difference', // New game type
+        title: { ar: "المرحلة 12: أوجد الاختلاف في الكود!", en: "Stage 12: Spot the Code Difference!" },
+        concept: { ar: "تحديد الاختلافات البصرية الدقيقة بين نسختين من الكود.", en: "Identify subtle visual differences between two versions of code." },
+        task: { ar: "ابحث عن 3 اختلافات بين الكودين. انقر على كل اختلاف في الكود الأيمن لإصلاحه.", en: "Find 3 differences between the two code snippets. Click on each difference in the right code block to fix it." },
+        codeLeft: `#include <iostream>
+
+int main() {
+    // This is the original code.
+    // It prints a message.
+    std::cout << "Hello, World!" << std::endl;
+    return 0;
+}`,
+        codeRight: `#include <iostream>
+
+int main() {
+    // This is the <span class="diff-spot" data-diff-id="diff1">modified</span> code.
+    // It <span class="diff-spot" data-diff-id="diff2">also</span> prints a message.
+    std::cout << "Hello, <span class="diff-spot" data-diff-id="diff3">Universe</span>!" << std::endl;
+    return 0;
+}`,
+        totalDifferences: 3,
+        expectedOutput: { ar: "جميع الاختلافات تم اكتشافها! أحسنت!", en: "All differences found! Excellent!" }, // This is a message, not code output
+        hint: { ar: "ركز على الكلمات المفتاحية والمسافات والأقواس. الاختلافات قد تكون صغيرة جداً!", en: "Focus on keywords, spacing, and parentheses. Differences can be very subtle!" }
     }
 ];
 
@@ -396,12 +489,33 @@ let timerDuration = parseInt(localStorage.getItem('timerDuration') || '60'); // 
 let currentTimer = timerDuration; // New: Current time remaining
 let timerInterval; // New: To store the setInterval ID for the timer
 let currentLanguage = localStorage.getItem('gameLanguage') || 'ar'; // Default to Arabic
+let currentTheme = localStorage.getItem('gameTheme') || 'default'; // New: Default theme
 
 // New: Global variable to track the screen from which settings were opened
 let previousScreenId = 'startMenu'; // Default to start menu
 
+// New: Code Streak variable
+let codeStreak = 0;
+
+// New: Simulated Leaderboard Data
+let leaderboardData = JSON.parse(localStorage.getItem('leaderboardData') || '[]');
+// Add a default entry if the leaderboard is empty
+if (leaderboardData.length === 0) {
+    leaderboardData.push({ name: "Player1", score: 5 });
+    leaderboardData.push({ name: "Player2", score: 3 });
+    leaderboardData.push({ name: "Player3", score: 8 });
+    leaderboardData.sort((a, b) => b.score - a.score); // Sort by score descending
+    localStorage.setItem('leaderboardData', JSON.stringify(leaderboardData));
+}
+
+// Spot the Difference specific variables
+let foundDifferencesCount = 0;
+let totalDifferencesInStage = 0;
+let currentSpotTheDifferenceStageIndex = 0; // To track progress within Spot the Difference game mode
+
+
 // Tone.js Synths for sounds
-let clickSynth, successSynth, errorSynth, musicSynth, countdownSynth, goSynth, timerWarningSynth; // Added new synths
+let clickSynth, successSynth, errorSynth, musicSynth, countdownSynth, goSynth, timerWarningSynth, diffFoundSynth; // Added new synths
 
 // Function to initialize Tone.js synths and music
 function initAudio() {
@@ -430,6 +544,10 @@ function initAudio() {
             oscillator: { type: "fmsine", modulationIndex: 3 },
             envelope: { attack: 0.01, decay: 0.1, sustain: 0.0, release: 0.2 },
             frequency: 400 // Starting frequency
+        }).toDestination();
+        diffFoundSynth = new Tone.Synth({ // New synth for finding a difference
+            oscillator: { type: "triangle" },
+            envelope: { attack: 0.01, decay: 0.1, sustain: 0.0, release: 0.1 }
         }).toDestination();
 
 
@@ -473,6 +591,7 @@ function initAudio() {
             countdownSynth.volume.value = sfxVolDb; // Set volume for new synths
             goSynth.volume.value = sfxVolDb; // Set volume for new synths
             timerWarningSynth.volume.value = sfxVolDb; // Set volume for new synths
+            diffFoundSynth.volume.value = sfxVolDb; // Set volume for new synths
         } else {
             const sfxVolDb = Tone.gainToDb(0.7); // Default SFX volume
             clickSynth.volume.value = sfxVolDb;
@@ -481,6 +600,7 @@ function initAudio() {
             countdownSynth.volume.value = sfxVolDb; // Set default for new synths
             goSynth.volume.value = sfxVolDb; // Set default for new synths
             timerWarningSynth.volume.value = sfxVolDb; // Set default for new synths
+            diffFoundSynth.volume.value = sfxVolDb; // Set default for new synths
         }
 
         // Start Tone.js context on first user interaction
@@ -503,7 +623,7 @@ function playSuccessSound() {
 function playErrorSound() {
     if (soundEnabled && errorSynth) errorSynth.triggerAttackRelease("C3", "8n");
 }
-function playCountdownBeep() { // New function for countdown beep
+function playCountdownBeep() { // New function for countdown beeps
     if (soundEnabled && countdownSynth) countdownSynth.triggerAttackRelease("C4", "8n");
 }
 function playGoSound() { // New function for "Go!" sound
@@ -511,6 +631,9 @@ function playGoSound() { // New function for "Go!" sound
 }
 function playTimerWarningSound() { // New function for timer warning sound
     if (soundEnabled && timerWarningSynth) timerWarningSynth.triggerAttackRelease("C#3", "16n");
+}
+function playDiffFoundSound() { // New function for finding a difference
+    if (soundEnabled && diffFoundSynth) diffFoundSynth.triggerAttackRelease("D5", "16n");
 }
 function playStartSound() {
     // This is now handled by the continuous background music
@@ -520,6 +643,7 @@ function playStartSound() {
 
 // Get DOM elements
 const startMenu = document.getElementById('startMenu');
+const gameModesMenu = document.getElementById('gameModesMenu'); // New: Game Modes Menu
 const settingsMenu = document.getElementById('settingsMenu');
 const developerInfoMenu = document.getElementById('developerInfoMenu');
 const learnWithUsMenu = document.getElementById('learnWithUsMenu');
@@ -527,24 +651,32 @@ const stageSelectionMenu = document.getElementById('stageSelectionMenu');
 const stagesGrid = document.getElementById('stagesGrid');
 const gameArea = document.getElementById('gameArea');
 const endMenu = document.getElementById('endMenu');
+const leaderboardMenu = document.getElementById('leaderboardMenu');
 
-const startButton = document.getElementById('startButton');
+const startGameModesButton = document.getElementById('startGameModesButton'); // Changed from startButton
+const cppJourneyButton = document.getElementById('cppJourneyButton'); // New
+const spotTheDifferenceButton = document.getElementById('spotTheDifferenceButton'); // New
+const backToMainMenuFromGameModes = document.getElementById('backToMainMenuFromGameModes'); // New
+
 const settingsButton = document.getElementById('settingsButton');
 const learnWithUsButton = document.getElementById('learnWithUsButton');
 const developerInfoButton = document.getElementById('developerInfoButton');
+const leaderboardButton = document.getElementById('leaderboardButton');
 const backToMainMenuFromSettings = document.getElementById('backToMainMenuFromSettings');
 const backToMainMenuFromDeveloper = document.getElementById('backToMainMenuFromDeveloper');
 const backToMainMenuFromLearn = document.getElementById('backToMainMenuFromLearn');
 const backToMainMenuFromStages = document.getElementById('backToMainMenuFromStages');
+const backToMainMenuFromLeaderboard = document.getElementById('backToMainMenuFromLeaderboard');
 
 const stageTitleElement = document.getElementById('stageTitle');
 const taskDescriptionElement = document.getElementById('taskDescription');
 const characterAvatar = document.getElementById('characterAvatar');
+const codeStreakDisplay = document.getElementById('codeStreakDisplay');
 const codeEditor = document.getElementById('codeEditor');
 const runButton = document.getElementById('runButton');
 const hintButton = document.getElementById('hintButton');
 const returnToStagesButton = document.getElementById('returnToStagesButton');
-const settingsFromGameButton = document.getElementById('settingsFromGameButton'); // New: Settings button in game area
+const settingsFromGameButton = document.getElementById('settingsFromGameButton');
 const consoleOutput = document.getElementById('consoleOutput');
 const nextButton = document.getElementById('nextButton');
 const endMessageElement = document.getElementById('endMessage');
@@ -558,21 +690,34 @@ const toggleSound = document.getElementById('toggleSound');
 const musicVolumeSlider = document.getElementById('musicVolume');
 const sfxVolumeSlider = document.getElementById('sfxVolume');
 const languageSelect = document.getElementById('languageSelect');
+const themeSelect = document.getElementById('themeSelect');
 
-// New countdown elements
+// Countdown elements
 const countdownOverlay = document.getElementById('countdownOverlay');
 const countdownNumber = document.getElementById('countdownNumber');
 
-// New timer elements
+// Timer elements
 const timerDisplay = document.getElementById('timerDisplay');
 const toggleTimer = document.getElementById('toggleTimer');
 const timerDurationSlider = document.getElementById('timerDuration');
 const timerDurationValueSpan = document.getElementById('timerDurationValue');
 
+const leaderboardList = document.getElementById('leaderboardList');
+
+// Spot the Difference specific elements
+const spotTheDifferenceArea = document.getElementById('spotTheDifferenceArea'); // New
+const leftCodeDisplay = document.getElementById('leftCodeDisplay'); // New
+const rightCodeDisplay = document.getElementById('rightCodeDisplay'); // New
+const differencesCounter = document.getElementById('differencesCounter'); // New
+
 
 // Function to translate text
-function translateText(key) {
-    return translations[currentLanguage][key] || `MISSING_TRANSLATION_${key}`;
+function translateText(key, replacements = {}) {
+    let text = translations[currentLanguage][key] || `MISSING_TRANSLATION_${key}`;
+    for (const placeholder in replacements) {
+        text = text.replace(`{${placeholder}}`, replacements[placeholder]);
+    }
+    return text;
 }
 
 // Function to update all UI elements with current language
@@ -582,19 +727,31 @@ function updateUI() {
     if (gameTitleEl) gameTitleEl.textContent = translateText('gameTitle');
     const sloganEl = document.getElementById('slogan');
     if (sloganEl) sloganEl.textContent = translateText('slogan');
-    const startButtonEl = document.getElementById('startButton');
-    if (startButtonEl) startButtonEl.innerHTML = `<i class="fas fa-play"></i> ${translateText('startButton')}`;
+    const startGameModesButtonEl = document.getElementById('startGameModesButton');
+    if (startGameModesButtonEl) startGameModesButtonEl.innerHTML = `<i class="fas fa-gamepad"></i> ${translateText('startGameModes')}`;
     const settingsButtonEl = document.getElementById('settingsButton');
     if (settingsButtonEl) settingsButtonEl.innerHTML = `<i class="fas fa-cog"></i> ${translateText('settingsButton')}`;
     const learnWithUsButtonEl = document.getElementById('learnWithUsButton');
     if (learnWithUsButtonEl) learnWithUsButtonEl.innerHTML = `<i class="fas fa-book-open"></i> ${translateText('learnWithUsButton')}`;
     const developerInfoButtonEl = document.getElementById('developerInfoButton');
     if (developerInfoButtonEl) developerInfoButtonEl.innerHTML = `<i class="fas fa-info-circle"></i> ${translateText('developerInfoButton')}`;
+    const leaderboardButtonEl = document.getElementById('leaderboardButton');
+    if (leaderboardButtonEl) leaderboardButtonEl.innerHTML = `<i class="fas fa-trophy"></i> ${translateText('leaderboardButton')}`;
     
     const contactUsLabelEl = document.getElementById('contactUsLabel');
     if (contactUsLabelEl) contactUsLabelEl.textContent = translateText('contactUsLabel');
     const instagramLinkTextMainEl = document.getElementById('instagramLinkTextMain');
     if (instagramLinkTextMainEl) instagramLinkTextMainEl.textContent = translateText('instagramLinkText');
+
+    // Game Modes menu
+    const gameModesMenuTitleEl = document.getElementById('gameModesMenuTitle');
+    if (gameModesMenuTitleEl) gameModesMenuTitleEl.textContent = translateText('gameModesMenuTitle');
+    const cppJourneyButtonEl = document.getElementById('cppJourneyButton');
+    if (cppJourneyButtonEl) cppJourneyButtonEl.innerHTML = `<i class="fas fa-terminal"></i> ${translateText('cppJourneyButton')}`;
+    const spotTheDifferenceButtonEl = document.getElementById('spotTheDifferenceButton');
+    if (spotTheDifferenceButtonEl) spotTheDifferenceButtonEl.innerHTML = `<i class="fas fa-eye"></i> ${translateText('spotTheDifferenceButton')}`;
+    const backToMainMenuFromGameModesEl = document.getElementById('backToMainMenuFromGameModes');
+    if (backToMainMenuFromGameModesEl) backToMainMenuFromGameModesEl.innerHTML = `<i class="fas fa-arrow-left ml-2"></i> ${translateText('backToMainMenu')}`;
 
 
     // Settings menu
@@ -609,13 +766,21 @@ function updateUI() {
     const languageSelectLabelEl = document.getElementById('languageSelectLabel');
     if (languageSelectLabelEl) languageSelectLabelEl.textContent = translateText('language');
     
-    // New Timer Settings UI Update
     const toggleTimerLabelEl = document.getElementById('toggleTimerLabel');
     if (toggleTimerLabelEl) toggleTimerLabelEl.textContent = translateText('toggleTimer');
     const timerDurationLabelEl = document.getElementById('timerDurationLabel');
     if (timerDurationLabelEl) timerDurationLabelEl.textContent = translateText('timerDuration');
     if (timerDurationValueSpan) timerDurationValueSpan.textContent = `${timerDurationSlider.value}${translateText('seconds')}`;
-    // End New Timer Settings UI Update
+    
+    const themeSelectLabelEl = document.getElementById('themeSelectLabel');
+    if (themeSelectLabelEl) themeSelectLabelEl.textContent = translateText('themeSelect');
+    const themeDefaultOption = themeSelect.querySelector('option[value="default"]');
+    if (themeDefaultOption) themeDefaultOption.textContent = translateText('themeDefault');
+    const themeCyberBlueOption = themeSelect.querySelector('option[value="cyber-blue"]');
+    if (themeCyberBlueOption) themeCyberBlueOption.textContent = translateText('themeCyberBlue');
+    const themeMatrixGreenOption = themeSelect.querySelector('option[value="matrix-green"]');
+    if (themeMatrixGreenOption) themeMatrixGreenOption.textContent = translateText('themeMatrixGreen');
+
 
     const moreSettingsSoonEl = document.getElementById('moreSettingsSoon');
     if (moreSettingsSoonEl) moreSettingsSoonEl.textContent = translateText('moreSettingsSoon');
@@ -661,7 +826,7 @@ function updateUI() {
     if (oopEl) oopEl.textContent = translateText('oop');
     const idesTitleEl = document.getElementById('idesTitle');
     if (idesTitleEl) idesTitleEl.textContent = translateText('idesTitle');
-    const idesTextEl = document.getElementById('idesText');
+    const idesTextEl = document = document.getElementById('idesText');
     if (idesTextEl) idesTextEl.textContent = translateText('idesText');
     const vsCodeTitleEl = document.getElementById('vsCodeTitle');
     if (vsCodeTitleEl) vsCodeTitleEl.textContent = translateText('vsCodeTitle');
@@ -713,7 +878,7 @@ function updateUI() {
     if (codeBlocksFirstCodeEl) codeBlocksFirstCodeEl.textContent = translateText('codeBlocksFirstCode');
     const librariesTitleEl = document.getElementById('librariesTitle');
     if (librariesTitleEl) librariesTitleEl.textContent = translateText('librariesTitle');
-    const librariesTextEl = document = document.getElementById('librariesText');
+    const librariesTextEl = document.getElementById('librariesText');
     if (librariesTextEl) librariesTextEl.textContent = translateText('librariesText');
     const iostreamLibEl = document.getElementById('iostreamLib');
     if (iostreamLibEl) iostreamLibEl.textContent = translateText('iostreamLib');
@@ -761,18 +926,21 @@ function updateUI() {
     if (backToMainMenuFromStagesEl) backToMainMenuFromStagesEl.innerHTML = `<i class="fas fa-arrow-left ml-2"></i> ${translateText('backToMainMenu')}`;
 
     // Game area
-    // stageTitleElement and taskDescriptionElement are updated by loadStage()
     const runButtonEl = document.getElementById('runButton');
     if (runButtonEl) runButtonEl.innerHTML = `<i class="fas fa-play ml-2"></i> ${translateText('runCodeButton')}`;
     const hintButtonEl = document.getElementById('hintButton');
     if (hintButtonEl) hintButtonEl.innerHTML = `<i class="fas fa-lightbulb ml-2"></i> ${translateText('hintButton')}`;
-    const returnToStagesButtonEl = document.getElementById('returnToStagesButton');
-    if (returnToStagesButtonEl) returnToStagesButtonEl.innerHTML = `<i class="fas fa-list ml-2"></i> ${translateText('returnToStages')}`;
+    // returnToStagesButton is now outside this flex container
     const nextButtonEl = document.getElementById('nextButton');
     if (nextButtonEl) nextButtonEl.innerHTML = `<i class="fas fa-arrow-right ml-2"></i> ${translateText('nextStage')}`;
-    // New: Settings button in game area
     const settingsFromGameButtonEl = document.getElementById('settingsFromGameButton');
     if (settingsFromGameButtonEl) settingsFromGameButtonEl.innerHTML = `<i class="fas fa-cog ml-2"></i> ${translateText('settingsInGame')}`;
+
+    // Leaderboard menu
+    const leaderboardMenuTitleEl = document.getElementById('leaderboardMenuTitle');
+    if (leaderboardMenuTitleEl) leaderboardMenuTitleEl.textContent = translateText('leaderboardMenuTitle');
+    const backToMainMenuFromLeaderboardEl = document.getElementById('backToMainMenuFromLeaderboard');
+    if (backToMainMenuFromLeaderboardEl) backToMainMenuFromLeaderboardEl.innerHTML = `<i class="fas fa-arrow-left ml-2"></i> ${translateText('backToMainMenu')}`;
 
 
     // End menu
@@ -791,10 +959,6 @@ function updateUI() {
 
     // Update dynamic text in stages (will be called by loadStage and populateStageSelectionMenu)
     populateStageSelectionMenu();
-    // loadStage() is now called after countdown, so no need to call it here directly
-    // if (gameArea.classList.contains('hidden') === false) { // Only load stage if game area is visible
-    //     loadStage(); // Reload current stage to update its text
-    // }
 }
 
 // Function to show a specific screen with smooth transition
@@ -810,7 +974,7 @@ function showScreen(screenId) {
     setTimeout(() => {
         loadingScreen.classList.add('active'); // Show loading screen during transition
         setTimeout(() => {
-            const screens = [startMenu, settingsMenu, developerInfoMenu, learnWithUsMenu, stageSelectionMenu, gameArea, endMenu];
+            const screens = [startMenu, gameModesMenu, settingsMenu, developerInfoMenu, learnWithUsMenu, stageSelectionMenu, gameArea, endMenu, leaderboardMenu];
             screens.forEach(screen => {
                 // Reset scroll position for all main-screen divs
                 screen.scrollTop = 0; // Reset scroll directly on the main screen div
@@ -832,31 +996,62 @@ function showScreen(screenId) {
 }
 
 // Function to start the game (transitions to stage selection)
-function startGameFlow() {
+function startGameModesFlow() { // Renamed from startGameFlow
     playStartSound();
+    showScreen('gameModesMenu'); // Show game modes menu
+}
+
+// Function to start C++ Journey
+function startCppJourney() {
+    playClickSound();
     showScreen('stageSelectionMenu');
     populateStageSelectionMenu();
 }
 
-// Function to populate the stage selection menu
+// Function to start Spot the Difference game
+function startSpotTheDifference() {
+    playClickSound();
+    // For now, directly load the first spot-the-difference stage (Stage 12)
+    // In a full implementation, you'd have a selection of Spot the Difference levels
+    currentStageIndex = stages.findIndex(stage => stage.gameType === 'spot-the-difference');
+    if (currentStageIndex === -1) {
+        console.error("No 'spot-the-difference' stage found!");
+        // Fallback to main menu or show error message
+        showScreen('startMenu');
+        return;
+    }
+    foundDifferencesCount = 0; // Reset for new game
+    totalDifferencesInStage = stages[currentStageIndex].totalDifferences; // Set total differences for the stage
+    updateDifferencesCounter(); // Update counter display
+    selectStage(currentStageIndex); // This will trigger countdown and then load the stage
+}
+
+
+// Function to populate the stage selection menu (for C++ Journey)
 function populateStageSelectionMenu() {
     stagesGrid.innerHTML = ''; // Clear previous buttons
-    stages.forEach((stage, index) => {
+    // Filter for 'cpp-journey' stages
+    const cppJourneyStages = stages.filter(stage => stage.gameType === 'cpp-journey');
+
+    cppJourneyStages.forEach((stage, index) => {
         const button = document.createElement('button');
         button.classList.add('stage-button', 'text-xl', 'font-semibold', 'p-6', 'rounded-xl', 'transition', 'duration-300', 'ease-in-out');
         button.innerHTML = `<i class="fas fa-code text-3xl mb-2 text-purple-300"></i><span class="text-lg">${stage.title[currentLanguage]}</span>`;
 
-        const isLocked = index > 0 && !completedStages.includes(index - 1);
+        // Check lock status based on original index in the filtered list
+        const isLocked = index > 0 && !completedStages.includes(stages.indexOf(cppJourneyStages[index - 1]));
         if (isLocked) {
             button.classList.add('locked');
             button.innerHTML = `<i class="fas fa-lock lock-icon"></i><i class="fas fa-code text-3xl mb-2 text-gray-500"></i><span class="text-lg text-gray-400">${stage.title[currentLanguage]}</span><span class="text-sm mt-1 text-gray-500">${translateText('locked')}</span>`;
             button.disabled = true; // Disable button
         } else {
+            // Use the original index from the 'stages' array
+            const originalIndex = stages.indexOf(stage);
             button.onclick = () => {
                 playClickSound();
-                selectStage(index); // This will now trigger the countdown
+                selectStage(originalIndex); // Select stage using its original index
             };
-            if (completedStages.includes(index)) {
+            if (completedStages.includes(originalIndex)) {
                 button.classList.add('completed');
                 button.innerHTML = `<i class="fas fa-check-circle text-3xl mb-2 text-green-200"></i><span class="text-lg">${stage.title[currentLanguage]}</span><span class="text-sm mt-1 text-green-100">${translateText('completed')}</span>`;
             }
@@ -868,7 +1063,8 @@ function populateStageSelectionMenu() {
 // Function to select and load a specific stage (now includes countdown)
 function selectStage(index) {
     currentStageIndex = index;
-    score = 0; // Reset score for the current attempt
+    codeStreak = 0; // Reset streak on new stage attempt
+    updateCodeStreakDisplay(); // Update streak display
     showScreen('gameArea'); // Show game area, countdown will overlay it
     startCountdown(); // Start countdown before loading stage content
 }
@@ -906,6 +1102,15 @@ function startCountdown() {
     }, 1000);
 }
 
+// New: Typewriter effect for task description
+let typewriterTimeout;
+function typeWriterEffect(element, text, i = 0, speed = 20) {
+    if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        typewriterTimeout = setTimeout(() => typeWriterEffect(element, text, i + 1, speed), speed);
+    }
+}
+
 // Function to load a new stage
 function loadStage() {
     if (currentStageIndex >= stages.length) {
@@ -915,19 +1120,114 @@ function loadStage() {
 
     const stage = stages[currentStageIndex];
     if (stageTitleElement) stageTitleElement.textContent = stage.title[currentLanguage];
-    if (taskDescriptionElement) taskDescriptionElement.textContent = stage.task[currentLanguage];
+    
     if (characterAvatar) characterAvatar.textContent = '😊'; // Reset character mood
-    if (characterAvatar) characterAvatar.classList.remove('happy', 'sad');
-    if (codeEditor) codeEditor.value = stage.initialCode || ''; // Load initial code or empty
-    if (consoleOutput) consoleOutput.textContent = ''; // Clear console
-    if (consoleOutput) consoleOutput.classList.remove('error', 'shake'); // Remove error and shake class
-    if (nextButton) nextButton.classList.add('hidden'); // Hide next button
-    if (hintButton) hintButton.classList.remove('hidden'); // Show hint button
-    if (runButton) runButton.disabled = false; // Enable run button
+    if (characterAvatar) characterAvatar.classList.remove('happy', 'sad', 'thinking');
+    
+    // Hide/show elements based on game type
+    if (stage.gameType === 'cpp-journey') {
+        codeEditor.classList.remove('hidden');
+        runButton.classList.remove('hidden');
+        hintButton.classList.remove('hidden');
+        spotTheDifferenceArea.classList.add('hidden');
+        differencesCounter.classList.add('hidden');
+        returnToStagesButton.classList.remove('game-return-button'); // Remove specific class for this mode
+        returnToStagesButton.classList.add('hidden'); // Hide it for cpp-journey, it's in the bottom bar
 
+        if (codeEditor) codeEditor.value = stage.initialCode || '';
+        if (taskDescriptionElement) {
+            taskDescriptionElement.innerHTML = '';
+            clearTimeout(typewriterTimeout);
+            typeWriterEffect(taskDescriptionElement, stage.task[currentLanguage]);
+        }
+        if (runButton) runButton.disabled = false;
+        if (nextButton) nextButton.classList.add('hidden');
+        
+    } else if (stage.gameType === 'spot-the-difference') {
+        codeEditor.classList.add('hidden');
+        runButton.classList.add('hidden'); // Run button not used for direct code execution
+        hintButton.classList.remove('hidden'); // Hint still useful
+        spotTheDifferenceArea.classList.remove('hidden');
+        differencesCounter.classList.remove('hidden');
+        returnToStagesButton.classList.add('game-return-button'); // Add specific class for this mode
+        returnToStagesButton.classList.remove('hidden'); // Show it
+
+        if (leftCodeDisplay) leftCodeDisplay.textContent = stage.codeLeft;
+        if (rightCodeDisplay) rightCodeDisplay.innerHTML = stage.codeRight; // Use innerHTML to render spans
+        
+        // Apply syntax highlighting to both code blocks
+        applySyntaxHighlighting(leftCodeDisplay);
+        applySyntaxHighlighting(rightCodeDisplay);
+
+        // Reset differences for the new stage
+        foundDifferencesCount = 0;
+        totalDifferencesInStage = stage.totalDifferences;
+        updateDifferencesCounter();
+        
+        // Add click listeners to diff spots
+        rightCodeDisplay.querySelectorAll('.diff-spot').forEach(spot => {
+            spot.classList.remove('found'); // Reset found state
+            spot.style.pointerEvents = 'auto'; // Re-enable clicks
+            spot.onclick = (event) => {
+                event.stopPropagation(); // Prevent click from propagating to parent
+                if (!spot.classList.contains('found')) {
+                    spot.classList.add('found');
+                    playDiffFoundSound(); // Play sound for finding a difference
+                    foundDifferencesCount++;
+                    updateDifferencesCounter();
+                    updateCharacterMood('happy'); // Character happy when difference found
+                    if (foundDifferencesCount === totalDifferencesInStage) {
+                        handleSpotTheDifferenceWin();
+                    }
+                }
+            };
+        });
+
+        if (taskDescriptionElement) {
+            taskDescriptionElement.innerHTML = '';
+            clearTimeout(typewriterTimeout);
+            typeWriterEffect(taskDescriptionElement, translateText('spotTheDifferenceTask', { total: totalDifferencesInStage }));
+        }
+        if (nextButton) nextButton.classList.add('hidden');
+    }
+
+    if (consoleOutput) consoleOutput.textContent = ''; // Clear console
+    if (consoleOutput) consoleOutput.classList.remove('error', 'shake');
+    
     updateProgressBar();
     startStageTimer(); // Start the stage timer if enabled
 }
+
+// New: Update Differences Counter
+function updateDifferencesCounter() {
+    if (differencesCounter) {
+        differencesCounter.textContent = translateText('differencesFound', {
+            found: foundDifferencesCount,
+            total: totalDifferencesInStage
+        });
+    }
+}
+
+// New: Handle Spot the Difference Win
+function handleSpotTheDifferenceWin() {
+    playSuccessSound();
+    if (consoleOutput) consoleOutput.textContent = translateText('allDifferencesFound');
+    if (consoleOutput) consoleOutput.style.color = 'var(--success-color)';
+    updateCharacterMood('happy');
+    triggerConfetti(consoleOutput.getBoundingClientRect());
+    triggerStarBurst(characterAvatar.getBoundingClientRect());
+    stopTimer(); // Stop timer on success
+    if (nextButton) nextButton.classList.remove('hidden'); // Show next button
+    if (hintButton) hintButton.classList.add('hidden'); // Hide hint button
+    // Mark stage as completed
+    if (!completedStages.includes(currentStageIndex)) {
+        completedStages.push(currentStageIndex);
+        localStorage.setItem('completedStages', JSON.stringify(completedStages));
+        // For Spot the Difference, we might need a separate progress tracking or just count it as a completed stage
+        updateLeaderboard(completedStages.length); // Update leaderboard
+    }
+}
+
 
 // New: Function to start the stage timer
 function startStageTimer() {
@@ -963,77 +1263,146 @@ function handleTimerExpired() {
     if (consoleOutput) consoleOutput.textContent = translateText('timerExpired');
     if (consoleOutput) consoleOutput.classList.add('error', 'shake');
     updateCharacterMood('sad');
-    if (runButton) runButton.disabled = true; // Disable further attempts
+    if (runButton) runButton.disabled = true; // Disable further attempts for cpp-journey
+    // For spot-the-difference, disable clicks on remaining spots
+    if (stages[currentStageIndex].gameType === 'spot-the-difference') {
+        rightCodeDisplay.querySelectorAll('.diff-spot:not(.found)').forEach(spot => {
+            spot.style.pointerEvents = 'none';
+        });
+    }
     if (hintButton) hintButton.classList.add('hidden'); // Hide hint
     if (nextButton) nextButton.classList.add('hidden'); // Hide next stage button
+    codeStreak = 0; // Reset streak on timer expiration
+    updateCodeStreakDisplay();
+}
+
+// New: Update Code Streak Display
+function updateCodeStreakDisplay() {
+    if (codeStreakDisplay) {
+        if (codeStreak > 0) {
+            codeStreakDisplay.textContent = translateText('codeStreak', { streak: codeStreak });
+            codeStreakDisplay.classList.add('active');
+        } else {
+            codeStreakDisplay.classList.remove('active');
+            codeStreakDisplay.textContent = '';
+        }
+    }
 }
 
 
 // Function to simulate code execution and validation
 function runCode() {
     playClickSound(); // Play click sound when running code
-    const userCode = codeEditor.value;
     const stage = stages[currentStageIndex];
+    
     if (consoleOutput) consoleOutput.textContent = ''; // Clear previous output
     if (consoleOutput) consoleOutput.classList.remove('error', 'shake'); // Reset error and shake state
 
-    // Basic validation of code structure
-    const validationResult = stage.codeValidation(userCode);
-    if (validationResult !== true) {
-        playErrorSound(); // Play error sound
-        if (consoleOutput) consoleOutput.textContent = `${translateText('codeBuildError')} ${validationResult}`;
-        if (consoleOutput) consoleOutput.classList.add('error', 'shake'); // Add shake effect
-        updateCharacterMood('sad');
-        return;
-    }
-
-    // Simulate execution based on expected output
-    // Note: Expected output is hardcoded in Arabic or English based on the stage definition.
-    // For true multilingual output, the expected output itself would need to be localized or generated.
-    if (userCode.includes(stage.expectedOutput.trim())) {
-        playSuccessSound(); // Play success sound
-        if (consoleOutput) consoleOutput.textContent = stage.expectedOutput;
-        if (consoleOutput) consoleOutput.style.color = 'var(--success-color)'; // Green for success
-        score++; // Increment score (can be refined to track stage completion)
-
-        // Mark stage as completed
-        if (!completedStages.includes(currentStageIndex)) {
-            completedStages.push(currentStageIndex);
-            localStorage.setItem('completedStages', JSON.stringify(completedStages));
-            populateStageSelectionMenu(); // Update menu to show completion
+    if (stage.gameType === 'cpp-journey') {
+        const userCode = codeEditor.value;
+        const validationResult = stage.codeValidation(userCode);
+        if (validationResult !== true) {
+            playErrorSound();
+            if (consoleOutput) consoleOutput.textContent = `${translateText('codeBuildError')} ${validationResult}`;
+            if (consoleOutput) consoleOutput.classList.add('error', 'shake');
+            updateCharacterMood('sad');
+            codeStreak = 0;
+            updateCodeStreakDisplay();
+            return;
         }
 
-        if (nextButton) nextButton.classList.remove('hidden'); // Show next button
-        if (runButton) runButton.disabled = true; // Disable run button after successful completion
-        if (hintButton) hintButton.classList.add('hidden'); // Hide hint button
-        updateCharacterMood('happy');
-        triggerConfetti(); // Trigger confetti effect
-        triggerStarBurst(); // Trigger star burst effect
-        stopTimer(); // Stop timer on success
-    } else {
-        playErrorSound(); // Play error sound
-        if (consoleOutput) consoleOutput.textContent = `${translateText('outputError')} \n${stage.expectedOutput.trim()}`;
-        if (consoleOutput) consoleOutput.classList.add('error', 'shake'); // Add shake effect
-        updateCharacterMood('sad');
+        let isCorrect = false;
+        if (stage.type === 'find-the-bug') {
+            isCorrect = userCode.trim() === stage.correctCode.trim();
+        } else {
+            isCorrect = userCode.includes(stage.expectedOutput.trim());
+        }
+
+        if (isCorrect) {
+            playSuccessSound();
+            if (consoleOutput) consoleOutput.textContent = stage.expectedOutput;
+            if (consoleOutput) consoleOutput.style.color = 'var(--success-color)';
+            
+            score++;
+            codeStreak++;
+            updateCodeStreakDisplay();
+
+            if (!completedStages.includes(currentStageIndex)) {
+                completedStages.push(currentStageIndex);
+                localStorage.setItem('completedStages', JSON.stringify(completedStages));
+                populateStageSelectionMenu();
+                updateLeaderboard(completedStages.filter(idx => stages[idx].gameType === 'cpp-journey').length); // Update leaderboard based on cpp-journey stages
+            }
+
+            if (nextButton) nextButton.classList.remove('hidden');
+            if (runButton) runButton.disabled = true;
+            if (hintButton) hintButton.classList.add('hidden');
+            updateCharacterMood('happy');
+            triggerConfetti(consoleOutput.getBoundingClientRect());
+            triggerStarBurst(characterAvatar.getBoundingClientRect());
+            stopTimer();
+        } else {
+            playErrorSound();
+            if (consoleOutput) consoleOutput.textContent = `${translateText('outputError')} \n${stage.expectedOutput.trim()}`;
+            if (consoleOutput) consoleOutput.classList.add('error', 'shake');
+            updateCharacterMood('sad');
+            codeStreak = 0;
+            updateCodeStreakDisplay();
+        }
+    } else if (stage.gameType === 'spot-the-difference') {
+        // For spot-the-difference, 'runCode' button is likely hidden or repurposed.
+        // The win condition is handled by clicking all differences.
+        if (foundDifferencesCount === totalDifferencesInStage) {
+             handleSpotTheDifferenceWin();
+        } else {
+            if (consoleOutput) consoleOutput.textContent = translateText('outputError'); // Generic error for not finding all diffs
+            if (consoleOutput) consoleOutput.classList.add('error', 'shake');
+            updateCharacterMood('sad');
+        }
     }
+}
+
+// New: Update Leaderboard
+function updateLeaderboard(newScore) {
+    let playerEntry = leaderboardData.find(entry => entry.name === "You");
+    if (!playerEntry) {
+        playerEntry = { name: "You", score: 0 };
+        leaderboardData.push(playerEntry);
+    }
+    if (newScore > playerEntry.score) {
+        playerEntry.score = newScore;
+    }
+    leaderboardData.sort((a, b) => b.score - a.score);
+    localStorage.setItem('leaderboardData', JSON.stringify(leaderboardData));
 }
 
 // Function to show hint
 function showHint() {
-    playClickSound(); // Play click sound for hint
+    playClickSound();
     const stage = stages[currentStageIndex];
     if (consoleOutput) consoleOutput.textContent = `${translateText('hintButton')}: ${stage.hint[currentLanguage]}`;
     if (consoleOutput) consoleOutput.classList.remove('error', 'shake');
-    if (consoleOutput) consoleOutput.style.color = 'var(--hint-color)'; // Yellow for hint
-    updateCharacterMood('thinking'); // Character thinks when hint is given
+    if (consoleOutput) consoleOutput.style.color = 'var(--hint-color)';
+    updateCharacterMood('thinking');
 }
 
 // Function to move to the next stage or end game
 function nextStage() {
-    playClickSound(); // Play click sound for next stage
+    playClickSound();
     currentStageIndex++;
     if (currentStageIndex < stages.length) {
-        selectStage(currentStageIndex); // Call selectStage to trigger countdown for next stage
+        // Find the next stage of the *same game type*
+        const currentStageGameType = stages[currentStageIndex - 1].gameType;
+        const nextStageOfTypeIndex = stages.findIndex((stage, index) => 
+            index >= currentStageIndex && stage.gameType === currentStageGameType
+        );
+
+        if (nextStageOfTypeIndex !== -1) {
+            selectStage(nextStageOfTypeIndex);
+        } else {
+            // No more stages of this game type, go to end screen or game modes menu
+            endGame(); // Or show a specific "game type completed" screen
+        }
     } else {
         endGame();
     }
@@ -1041,8 +1410,10 @@ function nextStage() {
 
 // Function to update the progress bar
 function updateProgressBar() {
-    const totalStages = stages.length;
-    const progress = (completedStages.length / totalStages) * 100;
+    // Progress bar now reflects C++ Journey progress only
+    const cppJourneyStagesCount = stages.filter(stage => stage.gameType === 'cpp-journey').length;
+    const completedCppJourneyStages = completedStages.filter(idx => stages[idx].gameType === 'cpp-journey').length;
+    const progress = (completedCppJourneyStages / cppJourneyStagesCount) * 100;
     if (progressBarFill) progressBarFill.style.width = `${progress}%`;
 }
 
@@ -1051,71 +1422,191 @@ function endGame() {
     showScreen('endMenu');
     if (document.getElementById('congratulationsTitle')) document.getElementById('congratulationsTitle').textContent = translateText('congratulationsTitle');
     if (endMessageElement) endMessageElement.textContent = translateText('endMessage');
-    updateCharacterMood('happy'); // Character is happy at the end
-    stopTimer(); // Stop timer at end game
+    updateCharacterMood('happy');
+    stopTimer();
+    updateLeaderboard(completedStages.filter(idx => stages[idx].gameType === 'cpp-journey').length);
 }
 
 // Function to restart the game
 function restartGame() {
-    playClickSound(); // Play click sound for restart
-    completedStages = []; // Clear completed stages on restart
+    playClickSound();
+    completedStages = [];
     localStorage.removeItem('completedStages');
     score = 0;
-    showScreen('startMenu'); // Go back to start menu
-    updateCharacterMood('😊'); // Reset character mood
-    stopTimer(); // Stop timer on restart
+    codeStreak = 0;
+    updateCodeStreakDisplay();
+    showScreen('startMenu');
+    updateCharacterMood('😊');
+    stopTimer();
 }
 
-// Confetti effect
-function triggerConfetti() {
-    if (!confettiContainer) return; // Null check for confetti container
-    confettiContainer.classList.remove('hidden');
-    for (let i = 0; i < 50; i++) {
-        const confetti = document.createElement('div');
-        confetti.classList.add('confetti');
-        confetti.style.left = `${Math.random() * 100}vw`;
-        confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 70%, 60%)`;
-        confetti.style.animationDelay = `${Math.random() * 0.5}s`;
-        confetti.style.transform = `scale(${Math.random() * 1 + 0.5})`;
-        confettiContainer.appendChild(confetti);
+// Confetti effect (enhanced with Three.js particles)
+function triggerConfetti(rect) {
+    if (!scene || !renderer) return; // Ensure Three.js is initialized
+
+    const particleCount = 100;
+    const positions = new Float32Array(particleCount * 3);
+    const colors = new Float32Array(particleCount * 3);
+
+    const baseColor = new THREE.Color(0xffd700); // Gold
+    const spread = 20; // How far particles spread
+
+    for (let i = 0; i < particleCount; i++) {
+        // Position particles around the center of the rect
+        positions[i * 3] = (Math.random() - 0.5) * spread;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * spread;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * spread;
+
+        // Randomize color slightly
+        baseColor.setHSL(Math.random(), 0.7, 0.6);
+        colors[i * 3] = baseColor.r;
+        colors[i * 3 + 1] = baseColor.g;
+        colors[i * 3 + 2] = baseColor.b;
     }
-    setTimeout(() => {
-        if (confettiContainer) confettiContainer.innerHTML = '';
-        if (confettiContainer) confettiContainer.classList.add('hidden');
-    }, 3000); // Remove confetti after 3 seconds
-}
 
-// Star Burst effect
-function triggerStarBurst() {
-    if (!starBurstContainer) return; // Null check for star burst container
-    starBurstContainer.classList.remove('hidden');
-    for (let i = 0; i < 10; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 0.2}s`;
-        starBurstContainer.appendChild(star);
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    const material = new THREE.PointsMaterial({
+        size: 1,
+        vertexColors: true,
+        transparent: true,
+        opacity: 1,
+        depthWrite: false, // Important for blending
+        blending: THREE.AdditiveBlending
+    });
+
+    const confettiParticles = new THREE.Points(geometry, material);
+    // Position in 3D space relative to the UI element's center
+    const centerX = (rect.left + rect.right) / 2 - window.innerWidth / 2;
+    const centerY = (rect.top + rect.bottom) / 2 - window.innerHeight / 2;
+    confettiParticles.position.set(centerX * (camera.position.z / 100), -centerY * (camera.position.z / 100), 0);
+    scene.add(confettiParticles);
+
+    // Animate confetti falling and fading
+    const initialPositions = Array.from(positions);
+    const velocities = new Float32Array(particleCount * 3);
+    for (let i = 0; i < particleCount; i++) {
+        velocities[i * 3] = (Math.random() - 0.5) * 0.5; // X velocity
+        velocities[i * 3 + 1] = Math.random() * 0.5 + 0.5; // Y velocity (upwards initially)
+        velocities[i * 3 + 2] = (Math.random() - 0.5) * 0.5; // Z velocity
     }
-    setTimeout(() => {
-        if (starBurstContainer) starBurstContainer.innerHTML = '';
-        if (starBurstContainer) starBurstContainer.classList.add('hidden');
-    }, 1000); // Remove stars after 1 second
+
+    let animationProgress = 0;
+    const animateConfetti = () => {
+        if (!confettiParticles || animationProgress >= 1) {
+            scene.remove(confettiParticles);
+            geometry.dispose();
+            material.dispose();
+            return;
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            positions[i * 3] += velocities[i * 3];
+            positions[i * 3 + 1] -= velocities[i * 3 + 1] - 0.05; // Gravity effect
+            positions[i * 3 + 1] = Math.max(-window.innerHeight / 2 * (camera.position.z / 100), positions[i * 3 + 1]); // Keep particles within screen bounds
+            velocities[i * 3 + 1] *= 0.98; // Air resistance
+        }
+        geometry.attributes.position.needsUpdate = true;
+        material.opacity = 1 - animationProgress; // Fade out
+
+        animationProgress += 0.01;
+        requestAnimationFrame(animateConfetti);
+    };
+    animateConfetti();
 }
 
-// Character mood update
+// Star Burst effect (enhanced with Three.js particles)
+function triggerStarBurst(rect) {
+    if (!scene || !renderer) return;
+
+    const particleCount = 50;
+    const positions = new Float32Array(particleCount * 3);
+    const colors = new Float32Array(particleCount * 3);
+
+    const baseColor = new THREE.Color(0xffeb3b); // Yellow
+    const spread = 10;
+
+    for (let i = 0; i < particleCount; i++) {
+        // Position particles around the center of the rect
+        positions[i * 3] = (Math.random() - 0.5) * spread;
+        positions[i * 3 + 1] = (Math.random() - 0.5) * spread;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * spread;
+
+        baseColor.setHSL(0.1 + Math.random() * 0.1, 0.9, 0.7 + Math.random() * 0.2);
+        colors[i * 3] = baseColor.r;
+        colors[i * 3 + 1] = baseColor.g;
+        colors[i * 3 + 2] = baseColor.b;
+    }
+
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    const material = new THREE.PointsMaterial({
+        size: 0.8,
+        vertexColors: true,
+        transparent: true,
+        opacity: 1,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+    });
+
+    const starParticles = new THREE.Points(geometry, material);
+    const centerX = (rect.left + rect.right) / 2 - window.innerWidth / 2;
+    const centerY = (rect.top + rect.bottom) / 2 - window.innerHeight / 2;
+    starParticles.position.set(centerX * (camera.position.z / 100), -centerY * (camera.position.z / 100), 0);
+    scene.add(starParticles);
+
+    // Animate star burst expanding and fading
+    const initialPositions = Array.from(positions);
+    const velocities = new Float32Array(particleCount * 3);
+    for (let i = 0; i < particleCount; i++) {
+        velocities[i * 3] = (Math.random() - 0.5) * 2;
+        velocities[i * 3 + 1] = (Math.random() - 0.5) * 2;
+        velocities[i * 3 + 2] = (Math.random() - 0.5) * 2;
+    }
+
+    let animationProgress = 0;
+    const animateStar = () => {
+        if (!starParticles || animationProgress >= 1) {
+            scene.remove(starParticles);
+            geometry.dispose();
+            material.dispose();
+            return;
+        }
+
+        for (let i = 0; i < particleCount; i++) {
+            positions[i * 3] += velocities[i * 3];
+            positions[i * 3 + 1] += velocities[i * 3 + 1];
+            positions[i * 3 + 2] += velocities[i * 3 + 2];
+        }
+        geometry.attributes.position.needsUpdate = true;
+        material.opacity = 1 - animationProgress;
+
+        animationProgress += 0.02;
+        requestAnimationFrame(animateStar);
+    };
+    animateStar();
+}
+
+
+// Character mood update (with new animations)
 function updateCharacterMood(mood) {
     if (characterAvatar) { // Add null check here
-        characterAvatar.classList.remove('happy', 'sad');
+        characterAvatar.classList.remove('happy', 'sad', 'thinking');
         if (mood === 'happy') {
             characterAvatar.textContent = '🥳';
             characterAvatar.classList.add('happy');
         } else if (mood === 'sad') {
             characterAvatar.textContent = '😔';
             characterAvatar.classList.add('sad');
-        } else { // Default neutral or thinking
-            characterAvatar.textContent = (mood === 'thinking') ? '🤔' : '😊';
-            characterAvatar.classList.remove('happy', 'sad');
+        } else if (mood === 'thinking') {
+            characterAvatar.textContent = '🤔';
+            characterAvatar.classList.add('thinking');
+        } else { // Default neutral
+            characterAvatar.textContent = '😊';
         }
     }
 }
@@ -1147,9 +1638,83 @@ function setupRunExampleButtons() {
     });
 }
 
+// New: Function for syntax highlighting
+function applySyntaxHighlighting(codeElement) {
+    const code = codeElement.textContent;
+    let highlightedCode = code;
+
+    // Keywords
+    const keywords = ['#include', 'int', 'main', 'std', 'cout', 'endl', 'return', 'void', 'if', 'else', 'for', 'while', 'class', 'public', 'private', 'protected', 'string', 'vector', 'double', 'sqrt', 'fstream', 'ofstream', 'ifstream'];
+    keywords.forEach(keyword => {
+        highlightedCode = highlightedCode.replace(new RegExp(`\\b${keyword}\\b`, 'g'), `<span class="keyword">${keyword}</span>`);
+    });
+
+    // Strings
+    highlightedCode = highlightedCode.replace(/(".*?")/g, `<span class="string">$1</span>`);
+
+    // Comments
+    highlightedCode = highlightedCode.replace(/(\/\/.*)/g, `<span class="comment">$1</span>`);
+    highlightedCode = highlightedCode.replace(/(\/\*[\s\S]*?\*\/)/g, `<span class="comment">$1</span>`);
+
+    // Numbers
+    highlightedCode = highlightedCode.replace(/(\b\d+(\.\d+)?\b)/g, `<span class="number">$1</span>`);
+
+    // Operators (basic)
+    highlightedCode = highlightedCode.replace(/([+\-*\/=<>!&|%])/g, `<span class="operator">$1</span>`);
+
+    // Preprocessor directives (like #include)
+    highlightedCode = highlightedCode.replace(/^(#.*)/gm, `<span class="preprocessor">$1</span>`);
+
+
+    codeElement.innerHTML = highlightedCode;
+}
+
+// New: Populate Leaderboard
+function populateLeaderboard() {
+    leaderboardList.innerHTML = ''; // Clear previous entries
+    if (leaderboardData.length === 0) {
+        leaderboardList.innerHTML = `<p class="text-center text-gray-400">${translateText('leaderboardEmpty')}</p>`;
+        return;
+    }
+
+    // Add a header for the list
+    const header = document.createElement('div');
+    header.classList.add('flex', 'justify-between', 'items-center', 'font-bold', 'text-lg', 'text-purple-300', 'mb-2', 'pb-1', 'border-b', 'border-gray-600');
+    header.innerHTML = `<span>${currentLanguage === 'ar' ? 'الاسم' : 'Name'}</span><span>${currentLanguage === 'ar' ? 'النقاط' : 'Score'}</span>`;
+    leaderboardList.appendChild(header);
+
+    leaderboardData.forEach((entry, index) => {
+        const item = document.createElement('div');
+        item.classList.add('flex', 'justify-between', 'items-center', 'py-2', 'border-b', 'border-gray-700', 'last:border-b-0');
+        if (entry.name === "You") { // Highlight current player's score
+            item.classList.add('text-yellow-300', 'font-bold');
+        } else {
+            item.classList.add('text-gray-200');
+        }
+        item.innerHTML = `<span>${index + 1}. ${entry.name}</span><span>${entry.score}</span>`;
+        leaderboardList.appendChild(item);
+    });
+
+    // Display current player's score at the bottom if not in top 10
+    const yourScoreEntry = leaderboardData.find(entry => entry.name === "You");
+    if (yourScoreEntry && !leaderboardData.slice(0, 10).includes(yourScoreEntry)) {
+        const yourScoreDiv = document.createElement('div');
+        yourScoreDiv.classList.add('text-center', 'text-yellow-400', 'font-bold', 'mt-4', 'pt-4', 'border-t', 'border-gray-700');
+        yourScoreDiv.textContent = translateText('yourScore', { score: yourScoreEntry.score });
+        leaderboardList.appendChild(yourScoreDiv);
+    }
+}
+
 
 // Event Listeners
-startButton.addEventListener('click', startGameFlow);
+startGameModesButton.addEventListener('click', startGameModesFlow); // Changed from startButton
+cppJourneyButton.addEventListener('click', startCppJourney); // New
+spotTheDifferenceButton.addEventListener('click', startSpotTheDifference); // New
+backToMainMenuFromGameModes.addEventListener('click', () => { // New
+    playClickSound();
+    showScreen('startMenu');
+});
+
 settingsButton.addEventListener('click', () => {
     playClickSound();
     previousScreenId = 'startMenu'; // Set origin when opening from main menu
@@ -1162,18 +1727,31 @@ settingsButton.addEventListener('click', () => {
     if (toggleTimer) toggleTimer.checked = timerEnabled;
     if (timerDurationSlider) timerDurationSlider.value = timerDuration;
     if (timerDurationValueSpan) timerDurationValueSpan.textContent = `${timerDurationSlider.value}${translateText('seconds')}`;
+    
+    // Sync theme selection
+    if (themeSelect) themeSelect.value = currentTheme;
 });
 learnWithUsButton.addEventListener('click', () => {
     playClickSound();
     previousScreenId = 'learnWithUsMenu'; // Set origin when opening from learn with us menu
     showScreen('learnWithUsMenu');
     // Setup run example buttons when Learn With Us menu is shown
-    setTimeout(setupRunExampleButtons, 100); // Small delay to ensure elements are in DOM
+    setTimeout(() => {
+        setupRunExampleButtons();
+        // Apply syntax highlighting to all code blocks in Learn With Us
+        document.querySelectorAll('.code-example-container pre code').forEach(applySyntaxHighlighting);
+    }, 100); // Small delay to ensure elements are in DOM
 });
 developerInfoButton.addEventListener('click', () => {
     playClickSound();
     previousScreenId = 'developerInfoMenu'; // Set origin when opening from developer info menu
     showScreen('developerInfoMenu');
+});
+leaderboardButton.addEventListener('click', () => {
+    playClickSound();
+    previousScreenId = 'startMenu'; // Leaderboard is accessed from main menu
+    showScreen('leaderboardMenu');
+    populateLeaderboard(); // Populate leaderboard when shown
 });
 backToMainMenuFromSettings.addEventListener('click', () => {
     playClickSound();
@@ -1194,21 +1772,22 @@ backToMainMenuFromLearn.addEventListener('click', () => {
 });
 backToMainMenuFromStages.addEventListener('click', () => {
     playClickSound();
+    showScreen('gameModesMenu'); // Go back to game modes menu from stages
+});
+backToMainMenuFromLeaderboard.addEventListener('click', () => {
+    playClickSound();
     showScreen('startMenu');
 });
 runButton.addEventListener('click', runCode);
 hintButton.addEventListener('click', showHint);
 nextButton.addEventListener('click', nextStage);
-returnToStagesButton.addEventListener('click', () => {
-    playClickSound();
-    showScreen('stageSelectionMenu');
-    populateStageSelectionMenu();
-});
+// returnToStagesButton is now a floating button, its event listener is defined below
 restartButton.addEventListener('click', restartGame);
 returnToStagesFromEndButton.addEventListener('click', () => {
     playClickSound();
-    showScreen('stageSelectionMenu');
-    populateStageSelectionMenu();
+    // After finishing all stages, return to game modes menu
+    showScreen('gameModesMenu');
+    // populateStageSelectionMenu(); // This would be for C++ Journey only
 });
 
 // New: Event listener for settings button in game area
@@ -1224,18 +1803,34 @@ if (settingsFromGameButton) {
         if (toggleTimer) toggleTimer.checked = timerEnabled;
         if (timerDurationSlider) timerDurationSlider.value = timerDuration;
         if (timerDurationValueSpan) timerDurationValueSpan.textContent = `${timerDurationSlider.value}${translateText('seconds')}`;
+        if (themeSelect) themeSelect.select.value = currentTheme;
     });
 }
 
+// Event listener for the floating returnToStagesButton
+if (returnToStagesButton) {
+    returnToStagesButton.addEventListener('click', () => {
+        playClickSound();
+        // Determine which stage selection menu to go back to based on current game type
+        if (stages[currentStageIndex].gameType === 'cpp-journey') {
+            showScreen('stageSelectionMenu');
+            populateStageSelectionMenu();
+        } else if (stages[currentStageIndex].gameType === 'spot-the-difference') {
+            // For now, if there's only one Spot the Difference stage, go back to Game Modes
+            showScreen('gameModesMenu');
+        }
+    });
+}
+
+
 // Settings: Toggle Sound
-if (toggleSound) { // Null check for toggleSound
+if (toggleSound) {
     toggleSound.addEventListener('change', (event) => {
         soundEnabled = event.target.checked;
-        localStorage.setItem('soundEnabled', soundEnabled); // Save sound preference
+        localStorage.setItem('soundEnabled', soundEnabled);
         if (musicSynth) {
             musicSynth.volume.value = soundEnabled ? Tone.gainToDb(parseFloat(musicVolumeSlider.value)) : -Infinity;
         }
-        // SFX volume is handled by individual play functions, they check soundEnabled
     });
 }
 
@@ -1247,11 +1842,11 @@ if (musicVolumeSlider) {
             musicSynth.volume.value = Tone.gainToDb(volume);
         }
         localStorage.setItem('musicVolume', volume);
-        if (volume === 0) { // If music volume is 0, ensure sound is off
+        if (volume === 0) {
             soundEnabled = false;
             if (toggleSound) toggleSound.checked = false;
             localStorage.setItem('soundEnabled', false);
-        } else if (toggleSound && !toggleSound.checked) { // If volume > 0 and toggle is off, turn it on
+        } else if (toggleSound && !toggleSound.checked) {
             soundEnabled = true;
             toggleSound.checked = true;
             localStorage.setItem('soundEnabled', true);
@@ -1266,15 +1861,16 @@ if (sfxVolumeSlider) {
         if (clickSynth) clickSynth.volume.value = Tone.gainToDb(volume);
         if (successSynth) successSynth.volume.value = Tone.gainToDb(volume);
         if (errorSynth) errorSynth.volume.value = Tone.gainToDb(volume);
-        if (countdownSynth) countdownSynth.volume.value = Tone.gainToDb(volume); // Update new synth volume
-        if (goSynth) goSynth.volume.value = Tone.gainToDb(volume); // Update new synth volume
-        if (timerWarningSynth) timerWarningSynth.volume.value = Tone.gainToDb(volume); // Update new synth volume
+        if (countdownSynth) countdownSynth.volume.value = Tone.gainToDb(volume);
+        if (goSynth) goSynth.volume.value = Tone.gainToDb(volume);
+        if (timerWarningSynth) timerWarningSynth.volume.value = Tone.gainToDb(volume);
+        if (diffFoundSynth) diffFoundSynth.volume.value = Tone.gainToDb(volume); // New SFX volume control
         localStorage.setItem('sfxVolume', volume);
-        if (volume === 0) { // If SFX volume is 0, ensure sound is off
+        if (volume === 0) {
             soundEnabled = false;
             if (toggleSound) toggleSound.checked = false;
             localStorage.setItem('soundEnabled', false);
-        } else if (toggleSound && !toggleSound.checked) { // If volume > 0 and toggle is off, turn it on
+        } else if (toggleSound && !toggleSound.checked) {
             soundEnabled = true;
             toggleSound.checked = true;
             localStorage.setItem('soundEnabled', true);
@@ -1299,13 +1895,44 @@ if (timerDurationSlider) {
     });
 }
 
+// New: Theme Selection Control
+if (themeSelect) {
+    themeSelect.addEventListener('change', (event) => {
+        currentTheme = event.target.value;
+        localStorage.setItem('gameTheme', currentTheme);
+        document.body.className = `theme-${currentTheme}`;
+        // Update 3D background particles color based on theme
+        if (particles) {
+            let newColor = new THREE.Color();
+            if (currentTheme === 'default') {
+                newColor.setHSL(0.6 + Math.random() * 0.2, 0.8, 0.5 + Math.random() * 0.3);
+            } else if (currentTheme === 'cyber-blue') {
+                newColor.setHSL(0.55 + Math.random() * 0.1, 0.9, 0.6 + Math.random() * 0.2);
+            } else if (currentTheme === 'matrix-green') {
+                newColor.setHSL(0.3 + Math.random() * 0.1, 0.8, 0.5 + Math.random() * 0.2);
+            }
+            // Re-assign colors to particles
+            const colors = particles.geometry.attributes.color.array;
+            for (let i = 0; i < particles.geometry.attributes.position.count; i++) {
+                newColor.setHSL(0.6 + Math.random() * 0.2, 0.8, 0.5 + Math.random() * 0.3); // Default hue
+                if (currentTheme === 'cyber-blue') newColor.setHSL(0.55 + Math.random() * 0.1, 0.9, 0.6 + Math.random() * 0.2);
+                if (currentTheme === 'matrix-green') newColor.setHSL(0.3 + Math.random() * 0.1, 0.8, 0.5 + Math.random() * 0.2);
+                colors[i * 3] = newColor.r;
+                colors[i * 3 + 1] = newColor.g;
+                colors[i * 3 + 2] = newColor.b;
+            }
+            particles.geometry.attributes.color.needsUpdate = true;
+        }
+    });
+}
+
 
 // Language Selection
-if (languageSelect) { // Null check for languageSelect
+if (languageSelect) {
     languageSelect.addEventListener('change', (event) => {
         currentLanguage = event.target.value;
-        localStorage.setItem('gameLanguage', currentLanguage); // Save language preference
-        updateUI(); // Update all UI text
+        localStorage.setItem('gameLanguage', currentLanguage);
+        updateUI();
     });
 }
 
@@ -1316,10 +1943,106 @@ if (codeEditor) {
     codeEditor.addEventListener('paste', (e) => e.preventDefault());
 }
 
+// --- Three.js Background Integration ---
+let scene, camera, renderer, particles, particleMaterial, mouseX = 0, mouseY = 0;
+const windowHalfX = window.innerWidth / 2;
+const windowHalfY = window.innerHeight / 2;
+
+function initThreeJs() {
+    const canvas = document.getElementById('threeJsCanvas');
+
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true }); // alpha: true for transparent background
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    // Particle geometry and material
+    const particleCount = 1000;
+    const positions = new Float32Array(particleCount * 3);
+    const colors = new Float32Array(particleCount * 3);
+
+    const color = new THREE.Color();
+
+    for (let i = 0; i < particleCount; i++) {
+        // Position particles randomly in a sphere
+        const r = 50; // Radius
+        const theta = Math.random() * Math.PI * 2;
+        const phi = Math.acos(Math.random() * 2 - 1);
+        positions[i * 3] = r * Math.sin(phi) * Math.cos(theta);
+        positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+        positions[i * 3 + 2] = r * Math.cos(phi);
+
+        // Assign colors (shades of purple/blue) - initial color based on default theme
+        color.setHSL(0.6 + Math.random() * 0.2, 0.8, 0.5 + Math.random() * 0.3); // Hue, Saturation, Lightness
+        colors[i * 3] = color.r;
+        colors[i * 3 + 1] = color.g;
+        colors[i * 3 + 2] = color.b;
+    }
+
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+    particleMaterial = new THREE.PointsMaterial({
+        size: 0.5,
+        vertexColors: true, // Use colors from geometry
+        transparent: true,
+        opacity: 0.8,
+        blending: THREE.AdditiveBlending // For glowing effect
+    });
+
+    particles = new THREE.Points(geometry, particleMaterial);
+    scene.add(particles);
+
+    camera.position.z = 70; // Adjust camera to see particles
+
+    // Lighting (optional, for more complex scenes)
+    const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
+    scene.add(ambientLight);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    directionalLight.position.set(0, 1, 0);
+    scene.add(directionalLight);
+
+    // Mouse interaction for camera movement
+    document.addEventListener('mousemove', onDocumentMouseMove, false);
+    window.addEventListener('resize', onWindowResize, false);
+}
+
+function onDocumentMouseMove(event) {
+    mouseX = (event.clientX - windowHalfX) * 0.1; // Adjust sensitivity
+    mouseY = (event.clientY - windowHalfY) * 0.1;
+}
+
+function onWindowResize() {
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function animateThreeJs() {
+    requestAnimationFrame(animateThreeJs);
+
+    // Rotate particles
+    particles.rotation.x += 0.0005;
+    particles.rotation.y += 0.001;
+
+    // Move camera based on mouse
+    camera.position.x += (mouseX - camera.position.x) * 0.05;
+    camera.position.y += (-mouseY - camera.position.y) * 0.05;
+    camera.lookAt(scene.position);
+
+    renderer.render(scene, camera);
+}
+// --- End Three.js Background Integration ---
+
 
 // Initial setup on window load
 window.onload = () => {
     initAudio(); // Initialize audio context
+    initThreeJs(); // Initialize Three.js scene
+    animateThreeJs(); // Start Three.js animation loop
+
     // Load sound preference from localStorage
     const savedSoundEnabled = localStorage.getItem('soundEnabled');
     if (savedSoundEnabled !== null) {
@@ -1333,6 +2056,15 @@ window.onload = () => {
         currentLanguage = savedLanguage;
     }
     if (languageSelect) languageSelect.value = currentLanguage; // Set dropdown to current language
+
+    // Load theme preference from localStorage and apply
+    const savedTheme = localStorage.getItem('gameTheme');
+    if (savedTheme) {
+        currentTheme = savedTheme;
+        document.body.className = `theme-${currentTheme}`;
+    }
+    if (themeSelect) themeSelect.value = currentTheme;
+
 
     // Apply saved volumes
     const savedMusicVolume = localStorage.getItem('musicVolume');
@@ -1351,18 +2083,20 @@ window.onload = () => {
         clickSynth.volume.value = sfxVolDb;
         successSynth.volume.value = sfxVolDb;
         errorSynth.volume.value = sfxVolDb;
-        if (countdownSynth) countdownSynth.volume.value = sfxVolDb; // Update new synth volume
-        if (goSynth) goSynth.volume.value = sfxVolDb; // Update new synth volume
-        if (timerWarningSynth) timerWarningSynth.volume.value = sfxVolDb; // Update new synth volume
+        if (countdownSynth) countdownSynth.volume.value = sfxVolDb;
+        if (goSynth) goSynth.volume.value = sfxVolDb;
+        if (timerWarningSynth) timerWarningSynth.volume.value = sfxVolDb;
+        if (diffFoundSynth) diffFoundSynth.volume.value = sfxVolDb; // New SFX volume init
     } else if (sfxVolumeSlider && clickSynth) { // Set default if not found
         sfxVolumeSlider.value = 0.7;
         const sfxVolDb = Tone.gainToDb(0.7);
         clickSynth.volume.value = sfxVolDb;
         successSynth.volume.value = sfxVolDb;
         errorSynth.volume.value = sfxVolDb;
-        if (countdownSynth) countdownSynth.volume.value = sfxVolDb; // Update new synth volume
-        if (goSynth) goSynth.volume.value = sfxVolDb; // Update new synth volume
-        if (timerWarningSynth) timerWarningSynth.volume.value = sfxVolDb; // Update new synth volume
+        if (countdownSynth) countdownSynth.volume.value = sfxVolDb;
+        if (goSynth) goSynth.volume.value = sfxVolDb;
+        if (timerWarningSynth) timerWarningSynth.volume.value = sfxVolDb;
+        if (diffFoundSynth) diffFoundSynth.volume.value = sfxVolDb; // New SFX volume init
     }
 
     // Mute/unmute based on soundEnabled

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl"> <!-- أضفنا dir="rtl" هنا لضمان اتجاه النص الصحيح للغة العربية -->
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,19 +12,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Tone.js for sounds -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
-    <!-- ربط ملف الأنماط الخارجي -->
+    <!-- Three.js for 3D background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Three.js Canvas for dynamic background -->
+    <canvas id="threeJsCanvas"></canvas>
+
     <div id="gameContainer" class="game-container">
         <!-- قائمة البدء (Start Menu) -->
         <div id="startMenu" class="flex flex-col items-center w-full main-screen">
             <h1 class="game-title" id="gameTitle"></h1>
             <p class="text-2xl text-gray-300 text-center max-w-lg mb-8" id="slogan"></p>
-            <button id="startButton" class="main-menu-button"></button>
+            <button id="startGameModesButton" class="main-menu-button"></button> <!-- Changed to Game Modes -->
             <button id="settingsButton" class="main-menu-button"></button>
             <button id="learnWithUsButton" class="main-menu-button"></button>
             <button id="developerInfoButton" class="main-menu-button"></button>
+            <button id="leaderboardButton" class="main-menu-button"></button>
             <div class="mt-8 flex flex-col items-center text-gray-400 text-sm">
                 <span id="contactUsLabel"></span>
                 <a id="instagramLinkMain" href="https://www.instagram.com/zent1official?igsh=azlxMmh4OW01Ymhz" target="_blank" class="instagram-animated-icon flex items-center mt-2">
@@ -67,6 +72,15 @@
                     <input type="range" id="timerDuration" min="10" max="300" step="10" value="60" class="w-24">
                     <span id="timerDurationValue" class="text-gray-400 text-sm">60s</span>
                 </label>
+                <!-- New: Theme Selection -->
+                <label class="flex items-center space-x-4 cursor-pointer">
+                    <span class="text-gray-300" id="themeSelectLabel"></span>
+                    <select id="themeSelect" class="bg-gray-700 text-white rounded p-1">
+                        <option value="default"></option>
+                        <option value="cyber-blue"></option>
+                        <option value="matrix-green"></option>
+                    </select>
+                </label>
                 <!-- نهاية إعدادات المؤقت الجديدة -->
                 <p class="text-gray-400 text-sm mt-4" id="moreSettingsSoon"></p>
             </div>
@@ -93,7 +107,7 @@
         <!-- قائمة تعلم معنا (Learn With Us Menu) -->
         <div id="learnWithUsMenu" class="hidden flex-col items-center space-y-6 w-full text-left main-screen">
             <h2 class="text-4xl font-extrabold text-white mb-4 text-center" id="learnWithUsMenuTitle"></h2>
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full">
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full code-example-container">
                 <h3 class="text-2xl font-bold text-purple-400 mb-4" id="cppBasicsTitle"></h3>
                 <p class="text-gray-300 mb-4 text-base" id="cppBasicsText"></p>
                 <ul class="list-disc list-inside text-gray-300 space-y-2 text-base">
@@ -107,7 +121,7 @@
                 </ul>
             </div>
 
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full mt-6">
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full mt-6 code-example-container">
                 <h3 class="text-2xl font-bold text-purple-400 mb-4" id="idesTitle"></h3>
                 <p class="text-gray-300 mb-4 text-base" id="idesText"></p>
                 <ul class="list-disc list-inside text-gray-300 space-y-4 text-base">
@@ -148,7 +162,7 @@
                 </ul>
             </div>
 
-            <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full mt-6">
+            <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full mt-6 code-example-container">
                 <h3 class="text-2xl font-bold text-purple-400 mb-4" id="librariesTitle"></h3>
                 <p class="text-gray-300 mb-4 text-base" id="librariesText"></p>
                 <ul class="list-disc list-inside text-gray-300 space-y-6 text-base">
@@ -246,6 +260,14 @@ int main() {
             <button id="backToMainMenuFromLearn" class="button-secondary mt-8"></button>
         </div>
 
+        <!-- قائمة أنماط اللعب (Game Modes Menu) -->
+        <div id="gameModesMenu" class="hidden flex-col items-center w-full main-screen">
+            <h2 class="text-4xl font-extrabold text-white mb-6" id="gameModesMenuTitle"></h2>
+            <button id="cppJourneyButton" class="main-menu-button"></button>
+            <button id="spotTheDifferenceButton" class="main-menu-button mt-4"></button>
+            <button id="backToMainMenuFromGameModes" class="button-secondary mt-8"></button>
+        </div>
+
         <!-- قائمة اختيار المرحلة (Stage Selection Menu) -->
         <div id="stageSelectionMenu" class="hidden flex-col items-center w-full main-screen">
             <div class="flex justify-between items-center w-full mb-6">
@@ -258,7 +280,10 @@ int main() {
         </div>
 
         <!-- منطقة اللعبة (Game Area) -->
-        <div id="gameArea" class="hidden flex-col items-center w-full main-screen">
+        <div id="gameArea" class="flex-col items-center w-full main-screen hidden">
+            <!-- Floating Return to Stages Button -->
+            <button id="returnToStagesButton" class="button-secondary game-return-button"></button>
+
             <div class="progress-bar">
                 <div id="progressBarFill" class="progress-fill" style="width: 0%;"></div>
             </div>
@@ -268,14 +293,23 @@ int main() {
             <div id="timerDisplay" class="timer-display hidden"></div> <!-- عرض المؤقت -->
 
             <div class="character-avatar" id="characterAvatar">😊</div>
+            <div id="codeStreakDisplay" class="hidden"></div> <!-- New: Code Streak Display -->
 
+            <!-- Code Writing/Bug Fixing Area -->
             <textarea id="codeEditor" class="code-editor" placeholder="اكتب كود C++ هنا..."></textarea>
+
+            <!-- Spot the Difference Area -->
+            <div id="spotTheDifferenceArea" class="code-display-container hidden">
+                <pre id="leftCodeDisplay" class="code-display-block left"></pre>
+                <pre id="rightCodeDisplay" class="code-display-block right"></pre>
+            </div>
+            <p id="differencesCounter" class="differences-counter hidden"></p>
+
 
             <div class="flex flex-wrap justify-center gap-4 mt-6 w-full">
                 <button id="runButton" class="button-primary flex-grow md:flex-grow-0"></button>
                 <button id="hintButton" class="button-secondary flex-grow md:flex-grow-0"></button>
-                <button id="returnToStagesButton" class="button-secondary flex-grow md:flex-grow-0"></button>
-                <button id="settingsFromGameButton" class="button-secondary flex-grow md:flex-grow-0"></button> <!-- زر الإعدادات الجديد -->
+                <button id="settingsFromGameButton" class="button-secondary flex-grow md:flex-grow-0"></button>
             </div>
 
             <div id="consoleOutput" class="console-output text-left mt-6">
@@ -283,6 +317,15 @@ int main() {
             </div>
 
             <button id="nextButton" class="button-primary mt-8 hidden"></button>
+        </div>
+
+        <!-- قائمة لوحة المتصدرين (Leaderboard Menu) -->
+        <div id="leaderboardMenu" class="hidden flex-col items-center w-full main-screen">
+            <h2 class="text-4xl font-extrabold text-white mb-6" id="leaderboardMenuTitle"></h2>
+            <div id="leaderboardList" class="w-full max-w-md bg-gray-800 rounded-xl p-6 shadow-lg">
+                <!-- Leaderboard entries will be injected here -->
+            </div>
+            <button id="backToMainMenuFromLeaderboard" class="button-secondary mt-8"></button>
         </div>
 
         <!-- قائمة النهاية (End Menu) -->
@@ -309,8 +352,9 @@ int main() {
         <div class="loading-spinner"></div>
         <p class="text-white text-2xl mt-4" id="loadingText"></p>
     </div>
-
-    <!-- ربط ملف السكريبت الخارجي -->
     <script src="script.js"></script>
 </body>
 </html>
+
+
+

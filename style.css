@@ -1,4 +1,4 @@
-/* CSS Variables for consistent theming */
+  /* CSS Variables for consistent theming */
 :root {
     --primary-color: #8b5cf6; /* Vibrant Purple */
     --primary-light: #c084fc;
@@ -14,45 +14,84 @@
     --hint-color: #fcd34d;
     --border-color: #8b5cf6;
     --timer-color: #fcd34d; /* Yellow for timer */
+
+    /* New: Theme specific variables */
+    --theme-primary: var(--primary-color);
+    --theme-primary-light: var(--primary-light);
+    --theme-primary-dark: var(--primary-dark);
+    --theme-background-dark: var(--background-dark);
+    --theme-background-light: var(--background-light);
+    --theme-container-bg: var(--container-bg);
+    --theme-text-light: var(--text-light);
+    --theme-border-color: var(--border-color);
 }
+
+/* Theme 1: Default Purple */
+.theme-default {
+    --theme-primary: #8b5cf6;
+    --theme-primary-light: #c084fc;
+    --theme-primary-dark: #7c3aed;
+    --theme-background-dark: #0a0a0a;
+    --theme-background-light: #1a1a1a;
+    --theme-container-bg: rgba(17, 24, 39, 0.98);
+    --theme-text-light: #e2e8f0;
+    --theme-border-color: #8b5cf6;
+}
+
+/* Theme 2: Cyber Blue */
+.theme-cyber-blue {
+    --theme-primary: #0ea5e9; /* Sky Blue */
+    --theme-primary-light: #38bdf8;
+    --theme-primary-dark: #0284c7;
+    --theme-background-dark: #0b1120;
+    --theme-background-light: #1a2030;
+    --theme-container-bg: rgba(10, 15, 25, 0.98);
+    --theme-text-light: #e0f2fe;
+    --theme-border-color: #0ea5e9;
+}
+
+/* Theme 3: Matrix Green */
+.theme-matrix-green {
+    --theme-primary: #22c55e; /* Emerald Green */
+    --theme-primary-light: #4ade80;
+    --theme-primary-dark: #16a34a;
+    --theme-background-dark: #0a1a0a;
+    --theme-background-light: #1a2a1a;
+    --theme-container-bg: rgba(15, 30, 15, 0.98);
+    --theme-text-light: #dcfce7;
+    --theme-border-color: #22c55e;
+}
+
 
 body {
     font-family: 'Cairo', sans-serif; /* Arabic font */
-    background: linear-gradient(135deg, var(--background-dark) 0%, var(--background-light) 100%);
+    background: linear-gradient(135deg, var(--theme-background-dark) 0%, var(--theme-background-light) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    color: var(--text-light);
+    color: var(--theme-text-light);
     overflow: hidden; /* Keep body hidden to control overall scrolling */
     position: relative;
+    transition: background 0.7s ease-in-out, color 0.7s ease-in-out; /* Smooth theme transition */
 }
-/* Background animation - more dynamic */
-body::before {
-    content: '';
-    position: absolute;
+
+/* Three.js Canvas for 3D background */
+#threeJsCanvas {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://placehold.co/1920x1080/0a0a0a/3b82f6?text=Binary_Code_Matrix') no-repeat center center/cover;
-    opacity: 0.15;
-    animation: background-pan 90s linear infinite alternate, background-zoom 30s ease-in-out infinite alternate;
-    z-index: -1;
-}
-@keyframes background-pan {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
-}
-@keyframes background-zoom {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    z-index: -2; /* Below the main game container */
+    opacity: 0.2; /* Subtle opacity */
+    filter: blur(1px); /* Slight blur for depth */
+    transition: opacity 1s ease-in-out;
 }
 
 .game-container {
-    background-color: var(--container-bg);
+    background-color: var(--theme-container-bg);
     border-radius: 1.5rem; /* Adjusted border-radius */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Adjusted shadow */
     padding: 2rem; /* Adjusted padding */
@@ -62,11 +101,12 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 3px solid var(--border-color); /* Adjusted border thickness */
+    border: 3px solid var(--theme-border-color); /* Adjusted border thickness */
     position: relative;
     overflow: hidden; /* Hide scrollbar for game-container itself */
     transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
     transform: scale(1);
+    z-index: 0; /* Ensure game container is above the 3D canvas */
 }
 .game-container.fade-out {
     opacity: 0;
@@ -97,7 +137,7 @@ body::before {
     font-family: 'Cairo', sans-serif;
     font-size: 3.5rem; /* Adjusted title font size */
     font-weight: 900;
-    color: var(--primary-color);
+    color: var(--theme-primary);
     text-shadow: 0 0 15px rgba(139, 92, 246, 0.7), 0 0 30px rgba(139, 92, 246, 0.5); /* Adjusted glow */
     margin-bottom: 1.2rem; /* Adjusted margin */
     letter-spacing: 1.5px; /* Adjusted letter spacing */
@@ -114,7 +154,7 @@ body::before {
 }
 
 .main-menu-button {
-    background: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(45deg, var(--theme-primary), var(--theme-primary-light));
     color: white;
     padding: 1rem 2.5rem; /* Adjusted padding */
     border-radius: 1.2rem; /* Adjusted border-radius */
@@ -133,7 +173,7 @@ body::before {
     transform: scale(1);
 }
 .main-menu-button:hover {
-    background: linear-gradient(45deg, var(--primary-dark), var(--primary-color));
+    background: linear-gradient(45deg, var(--theme-primary-dark), var(--theme-primary));
     transform: translateY(-4px) scale(1.01); /* Adjusted lift and scale */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adjusted shadow */
 }
@@ -280,7 +320,7 @@ body::before {
 }
 .progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+    background: linear-gradient(90deg, var(--theme-primary), var(--theme-primary-light));
     border-radius: 0.25rem;
     transition: width 0.5s ease-in-out;
 }
@@ -368,12 +408,30 @@ body::before {
 }
 .character-avatar.happy {
     background-color: var(--success-color);
-    transform: scale(1.1);
+    animation: character-bounce 0.5s ease-out; /* New animation */
 }
 .character-avatar.sad {
     background-color: var(--error-color);
-    transform: scale(0.9);
+    animation: character-shake 0.3s ease-out; /* New animation */
 }
+.character-avatar.thinking {
+    background-color: var(--hint-color);
+    animation: character-pulse 1s infinite alternate; /* New animation */
+}
+@keyframes character-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px) scale(1.1); }
+}
+@keyframes character-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+@keyframes character-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
 
 /* Loading Screen */
 .loading-screen {
@@ -397,8 +455,8 @@ body::before {
     pointer-events: all;
 }
 .loading-spinner {
-    border: 3px solid var(--primary-color);
-    border-top: 3px solid var(--text-light);
+    border: 3px solid var(--theme-primary);
+    border-top: 3px solid var(--theme-text-light);
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -408,6 +466,16 @@ body::before {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+/* Loading text with pulsing effect */
+#loadingText {
+    color: var(--theme-text-light);
+    animation: pulse-text 1.5s infinite alternate;
+}
+@keyframes pulse-text {
+    0% { opacity: 0.7; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.05); }
+}
+
 
 /* Countdown Overlay */
 .countdown-overlay {
@@ -431,7 +499,7 @@ body::before {
     font-family: 'Cairo', sans-serif;
     font-size: 8rem; /* Large number */
     font-weight: 900;
-    color: var(--primary-color);
+    color: var(--theme-primary);
     text-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.6);
     animation: countdown-scale 1s ease-out forwards; /* Animation for each number */
 }
@@ -449,6 +517,27 @@ body::before {
     color: var(--timer-color);
     margin-bottom: 1rem;
     text-shadow: 0 0 8px rgba(252, 211, 77, 0.5);
+}
+
+/* Code Streak Display */
+#codeStreakDisplay {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--hint-color);
+    margin-top: 1rem;
+    text-shadow: 0 0 5px rgba(252, 211, 77, 0.5);
+    transition: all 0.3s ease-in-out;
+    opacity: 0; /* Start hidden */
+}
+#codeStreakDisplay.active {
+    opacity: 1;
+    animation: streak-pop 0.5s ease-out;
+}
+@keyframes streak-pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    70% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
 }
 
 
@@ -469,12 +558,22 @@ p, li, label {
     border-radius: 10px;
 }
 .main-screen::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
+    background: var(--theme-primary);
     border-radius: 10px;
 }
 .main-screen::-webkit-scrollbar-thumb:hover {
-    background: var(--primary-light);
+    background: var(--theme-primary-light);
 }
+
+/* Code highlighting styles (Learn With Us) */
+.code-example-container pre code .keyword { color: #569cd6; } /* Blue */
+.code-example-container pre code .string { color: #d69d85; } /* Orange */
+.code-example-container pre code .comment { color: #6a9955; } /* Green */
+.code-example-container pre code .type { color: #4ec9b0; } /* Teal */
+.code-example-container pre code .function { color: #dcdcaa; } /* Yellow */
+.code-example-container pre code .operator { color: #d4d4d4; } /* White */
+.code-example-container pre code .number { color: #b5cea8; } /* Light Green */
+.code-example-container pre code .preprocessor { color: #9a9a9a; } /* Gray */
 
 
 /* Responsive adjustments */
@@ -565,6 +664,19 @@ p, li, label {
     .timer-display {
         font-size: 1rem;
     }
+
+    /* Spot the Difference Specific Responsive Adjustments */
+    .code-display-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .code-display-block {
+        height: 150px; /* Adjust height for mobile */
+        font-size: 0.6rem;
+    }
+    .diff-spot {
+        font-size: 0.6rem; /* Adjust font size for clickable spots */
+    }
 }
 /* Instagram icon animation */
 @keyframes instagram-float-color {
@@ -576,4 +688,96 @@ p, li, label {
 }
 .instagram-animated-icon {
     animation: instagram-float-color 4s ease-in-out infinite;
+}
+
+/* New: Styles for Spot the Difference Game */
+.code-display-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.code-display-block {
+    background-color: #1f2937;
+    color: var(--text-light);
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.75rem;
+    width: 48%; /* Adjust width for two columns */
+    height: 250px; /* Fixed height for code display */
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: 1px solid var(--secondary-color);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.25);
+    position: relative; /* For positioning diff spots */
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.code-display-block.left {
+    border-right: 2px solid var(--theme-primary); /* Visual separator */
+}
+
+.diff-spot {
+    background-color: rgba(255, 255, 0, 0.1); /* Subtle yellow highlight for clickable areas */
+    border-bottom: 1px dashed var(--hint-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    display: inline-block; /* To allow padding and margin */
+    padding: 0 2px;
+    border-radius: 3px;
+}
+
+.diff-spot:hover {
+    background-color: rgba(255, 255, 0, 0.2);
+    border-color: var(--hint-color);
+}
+
+.diff-spot.found {
+    background-color: rgba(76, 209, 55, 0.3); /* Green highlight when found */
+    border-bottom: 1px solid var(--success-color);
+    cursor: default;
+    pointer-events: none; /* Disable further clicks */
+}
+
+.diff-spot.found::after {
+    content: ' ✓'; /* Checkmark after found difference */
+    color: var(--success-color);
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+.differences-counter {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--hint-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px rgba(252, 211, 77, 0.5);
+}
+
+/* Style for the floating return button in game area */
+.game-return-button {
+    position: absolute;
+    top: 1rem; /* Adjust as needed */
+    right: 1rem; /* Adjust as needed for RTL */
+    z-index: 10; /* Ensure it's above other content */
+    padding: 0.6rem 1.2rem; /* Make it slightly larger */
+    font-size: 0.9rem; /* Adjust font size */
+    border-radius: 0.6rem; /* Match other buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add more prominent shadow */
+}
+@media (max-width: 768px) {
+    .game-return-button {
+        top: 0.5rem;
+        right: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
 }
